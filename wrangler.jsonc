@@ -5,11 +5,16 @@
   "assets": {
     "directory": "./",
     "binding": "ASSETS",
-    "run_worker_first": ["/api/admin/*"]
+    "run_worker_first": [
+      "/api/admin/*"
+    ]
   },
   "vars": {
     "GITHUB_OWNER": "progen-ai-kr",
     "GITHUB_REPO": "silua-axis",
-    "GITHUB_BRANCH": "main"
+    "GITHUB_BRANCH": "main",
+    "GITHUB_REPOS": "silua-aideabank,silua-axis",
+    "ADMIN_ENABLED": "false",
+    "ADMIN_URL": "https://silua-aideabank.progen-web.workers.dev/admin"
   }
 }
