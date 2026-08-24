@@ -15,6 +15,6 @@
     "GITHUB_BRANCH": "main",
     "GITHUB_REPOS": "silua-aideabank,silua-axis",
     "ADMIN_ENABLED": "false",
-    "ADMIN_URL": "https://silua-aideabank.progen-web.workers.dev/admin"
+    "ADMIN_URL": "https://silua-admin.progen-web.workers.dev/admin"
   }
 }
