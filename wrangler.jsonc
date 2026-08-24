@@ -1,5 +1,15 @@
 {
   "name": "silua-axis",
   "compatibility_date": "2025-01-01",
-  "assets": { "directory": "./" }
+  "main": "worker.js",
+  "assets": {
+    "directory": "./",
+    "binding": "ASSETS",
+    "run_worker_first": ["/api/admin/*"]
+  },
+  "vars": {
+    "GITHUB_OWNER": "progen-ai-kr",
+    "GITHUB_REPO": "silua-axis",
+    "GITHUB_BRANCH": "main"
+  }
 }
