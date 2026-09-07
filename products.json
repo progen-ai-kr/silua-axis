@@ -2,6 +2,43 @@
   "_설명": "브랜드 담당자가 사이트 관리자에서 제품과 상세페이지를 관리합니다. 학생은 이 파일을 직접 수정하지 않습니다.",
   "products": [
     {
+      "id": "43fbe2a4-5720-4db9-8b05-e6600d7566e5",
+      "published": false,
+      "featured": false,
+      "label": "NEW",
+      "name": "새 제품",
+      "summary": "",
+      "category": "",
+      "price": "",
+      "keywords": [],
+      "images": [],
+      "buyLabel": "구매하기",
+      "buyLink": "",
+      "buyNotice": "",
+      "sections": [
+        {
+          "type": "rich_text",
+          "body": "<p><br></p>"
+        }
+      ]
+    },
+    {
+      "id": "b1033315-1eea-4c55-b72f-93aaed73ee3e",
+      "published": false,
+      "featured": false,
+      "label": "NEW",
+      "name": "새 제품",
+      "summary": "",
+      "category": "",
+      "price": "",
+      "keywords": [],
+      "images": [],
+      "buyLabel": "구매하기",
+      "buyLink": "",
+      "buyNotice": "",
+      "sections": []
+    },
+    {
       "id": "a7bc77a7-f9a7-4e80-bc94-1849a58eb8a1",
       "published": false,
       "featured": false,
