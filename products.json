@@ -2,6 +2,29 @@
   "_설명": "브랜드 담당자가 사이트 관리자에서 제품과 상세페이지를 관리합니다. 학생은 이 파일을 직접 수정하지 않습니다.",
   "products": [
     {
+      "id": "16464090-04e8-4372-acab-e39372a46721",
+      "published": true,
+      "featured": true,
+      "label": "NEW",
+      "name": "새 제품",
+      "summary": "",
+      "category": "",
+      "price": "",
+      "keywords": [],
+      "images": [
+        "images/products/16464090-04e8-4372-acab-e39372a46721/1789195841828-ee0afe65.png"
+      ],
+      "buyLabel": "구매하기",
+      "buyLink": "",
+      "buyNotice": "",
+      "sections": [
+        {
+          "type": "rich_text",
+          "body": "<p><br></p>"
+        }
+      ]
+    },
+    {
       "id": "43fbe2a4-5720-4db9-8b05-e6600d7566e5",
       "published": false,
       "featured": false,
