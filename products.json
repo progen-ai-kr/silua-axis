@@ -36,29 +36,6 @@
       "buyLabel": "구매하기",
       "buyLink": "",
       "buyNotice": "",
-      "sections": []
-    },
-    {
-      "id": "a7bc77a7-f9a7-4e80-bc94-1849a58eb8a1",
-      "published": true,
-      "featured": true,
-      "label": "NEW",
-      "name": "<백의 민족> 한복 웨딩드레스",
-      "summary": "",
-      "category": "SELF WEDDING",
-      "price": "300,000(대여)",
-      "keywords": [
-        "Self Wedding",
-        "White",
-        "Silk",
-        "Hanbok"
-      ],
-      "images": [
-        "images/products/a7bc77a7-f9a7-4e80-bc94-1849a58eb8a1/1789195225173-203f4a48.png"
-      ],
-      "buyLabel": "구매하기",
-      "buyLink": "",
-      "buyNotice": "",
       "sections": [
         {
           "type": "rich_text",
