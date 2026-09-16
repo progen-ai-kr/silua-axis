@@ -5,18 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- [작성서 01] 브랜드명으로 바꾸세요 -->
-  <title>브랜드 이름</title>
+  <title>SILUA</title>
   <!-- [작성서 02] 한 줄 소개 → 검색·공유 미리보기에 나오는 설명 -->
   <meta name="description" content="브랜드 한 줄 소개를 여기에 적으세요." />
 
   <!-- 카톡/인스타 공유 미리보기 (OG 태그) — 브랜드명·소개·대표이미지로 바꾸세요 -->
-  <meta property="og:title" content="브랜드 이름" />
+  <meta property="og:title" content="SILUA" />
   <meta property="og:description" content="브랜드 한 줄 소개" />
   <meta property="og:image" content="images/og.jpg" />
   <meta property="og:type" content="website" />
 
   <!-- 탭 아이콘 (images/favicon.png 넣으면 표시됨) -->
-  <link rel="icon" href="images/favicon.png" />
+  <link rel="icon" type="image/png" href="images/silua-main-logo.png?v=2" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -24,13 +24,16 @@
   <!-- ===== 상단 메뉴 (5페이지 공통 — 수정하면 모든 페이지에 똑같이 반영하세요) ===== -->
   <header class="nav">
     <div class="nav-inner">
-      <a href="index.html" class="logo">BRAND</a>
+      <a href="index.html" class="logo"><img class="brand-logo header-logo" src="images/silua-logo.png" alt="실루아" /></a>
       <button class="nav-toggle" aria-label="메뉴 열기">☰</button>
       <nav class="nav-menu">
-        <a href="index.html" class="active">홈</a>
-        <a href="about.html">브랜드 소개</a>
-        <a href="products.html">제품</a>
-        <a href="portfolio.html">포트폴리오</a>
+        <a href="index.html" class="active">HOME</a>
+        <a href="about.html">INTRODUCE</a>
+        <a href="products.html?collection=self-wedding" data-collection="self-wedding">Self-wedding</a>
+        <a href="products.html?collection=evening-party" data-collection="evening-party">Evening &amp; Party</a>
+        <a href="products.html?collection=suit" data-collection="suit">Suit</a>
+        <a href="products.html?collection=accessory" data-collection="accessory">Accessory</a>
+        <a href="contact.html#reservation" data-reservation-link>Reservation</a>
         <a href="contact.html">문의</a>
       </nav>
     </div>
@@ -38,9 +41,12 @@
 
   <!-- ===== 히어로 [작성서 04 홈: 메인 카피·서브 카피] ===== -->
   <section class="hero">
-    <p class="eyebrow">BRAND KEYWORD · KEYWORD</p>
-    <h1>메인 카피 (20자 내)</h1>
-    <p>서브 카피 (40자 내) — 브랜드를 소개하는 짧은 문장을 적으세요.</p>
+    <div class="eyebrow brand-eyebrow">
+      <img class="brand-logo hero-logo" src="images/silua-main-logo.png" alt="실루아" />
+      <span>-SILUA DRESS-</span>
+    </div>
+    <h1>특별한 날 빛나야 할 당신을 위한<br />단 하나의 우아함</h1>
+    <p>전통의 결을 현대적 곡선으로 빚어내어,<br />가장 빛나는 순간을 완성합니다.</p>
     <a href="products.html" class="btn">컬렉션 보기</a>
   </section>
 
@@ -76,12 +82,12 @@
 
   <!-- ===== 푸터 (5페이지 공통) [작성서 01: 푸터 표기 정보] ===== -->
   <footer class="footer">
-    <p class="logo">BRAND</p>
+    <p class="logo"><img class="brand-logo footer-logo" src="images/silua-logo.png" alt="실루아" /></p>
     <p class="biz">
       상호: ○○○ · 대표자: ○○○<br />
       사업자등록번호: 000-00-00000 · 주소: ○○○
     </p>
-    <p>© 브랜드 이름. All rights reserved.</p>
+    <p>© SILUA. All rights reserved.</p>
   </footer>
 
   <script src="script.js"></script>
