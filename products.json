@@ -8,7 +8,7 @@
       "label": "RENTAL",
       "name": "튤립 레이스 드레스",
       "summary": "섬세한 레이스와 단정한 실루엣의 셀프웨딩 드레스.",
-      "category": "셀프 웨딩",
+      "category": "드레스",
       "price": "210,000원",
       "keywords": [
         "셀프 웨딩",
@@ -39,7 +39,7 @@
       "label": "RENTAL",
       "name": "하트넥 펄 드레스",
       "summary": "하트넥과 은은한 펄 디테일이 돋보이는 드레스.",
-      "category": "셀프 웨딩",
+      "category": "드레스",
       "price": "216,000원",
       "keywords": [
         "셀프 웨딩",
@@ -70,7 +70,7 @@
       "label": "RENTAL",
       "name": "브이넥 레이스 드레스",
       "summary": "브이넥 레이스 보디스와 유연한 스커트가 조화를 이루는 드레스.",
-      "category": "셀프 웨딩",
+      "category": "드레스",
       "price": "216,000원",
       "keywords": [
         "셀프 웨딩",
@@ -101,7 +101,7 @@
       "label": "RENTAL",
       "name": "오프숄더 드레스",
       "summary": "미니멀한 새틴과 오프숄더 라인이 돋보이는 드레스.",
-      "category": "셀프 웨딩",
+      "category": "드레스",
       "price": "168,000원",
       "keywords": [
         "셀프 웨딩",
@@ -132,7 +132,7 @@
       "label": "RENTAL",
       "name": "진주 오프숄더 드레스",
       "summary": "진주 장식과 오프숄더 실루엣을 담은 셀프웨딩 드레스.",
-      "category": "셀프 웨딩",
+      "category": "드레스",
       "price": "204,000원",
       "keywords": [
         "셀프 웨딩",
@@ -163,7 +163,7 @@
       "label": "RENTAL",
       "name": "샤로니에 드레스",
       "summary": "풍성한 벨라인으로 특별한 순간을 완성하는 웨딩 드레스.",
-      "category": "셀프 웨딩",
+      "category": "드레스",
       "price": "129,000원",
       "keywords": [
         "셀프 웨딩",
@@ -194,7 +194,7 @@
       "label": "RENTAL",
       "name": "아네모네 드레스",
       "summary": "퍼프소매와 러플 디테일이 자연스럽게 흐르는 원피스 드레스.",
-      "category": "셀프 웨딩",
+      "category": "드레스",
       "price": "53,000원",
       "keywords": [
         "셀프 웨딩",
@@ -225,7 +225,7 @@
       "label": "RENTAL",
       "name": "칸나 드레스",
       "summary": "단정한 칼라와 랩 실루엣을 담은 스몰웨딩 드레스.",
-      "category": "셀프 웨딩",
+      "category": "드레스",
       "price": "45,000원",
       "keywords": [
         "셀프 웨딩",
@@ -246,6 +246,778 @@
         {
           "type": "rich_text",
           "body": "<p>단정한 칼라와 랩 실루엣을 담은 스몰웨딩 드레스.</p><p>구매·대여 가능 여부와 희망 일정은 문의 페이지에서 상담해 주세요.</p>"
+        }
+      ]
+    },
+    {
+      "id": "store-82603705266",
+      "published": true,
+      "featured": false,
+      "label": "RENTAL",
+      "name": "카넬리안",
+      "summary": "카넬리안 이브닝·파티 드레스 대여 상품입니다.",
+      "category": "드레스",
+      "price": "185,000원",
+      "keywords": [
+        "대여",
+        "드레스",
+        "카넬리안",
+        "이브닝",
+        "파티",
+        "연주회"
+      ],
+      "images": [
+        "images/products/store-82603705266/1789630337885-f5714725.jpg"
+      ],
+      "buyLabel": "상품 문의하기",
+      "buyLink": "https://silua-aideabank.progen-web.workers.dev/contact?product=%EC%B9%B4%EB%84%AC%EB%A6%AC%EC%95%88&productId=store-82603705266",
+      "buyNotice": "상품명과 희망 대여 일정을 알려주시면 재고와 이용 방법을 안내해 드립니다.",
+      "sections": [
+        {
+          "type": "rich_text",
+          "body": "<p>카넬리안 이브닝·파티 드레스 대여 상품입니다.</p><p>구매·대여 가능 여부와 희망 일정은 문의 페이지에서 상담해 주세요.</p>"
+        }
+      ]
+    },
+    {
+      "id": "store-83142692569",
+      "published": true,
+      "featured": false,
+      "label": "RENTAL",
+      "name": "마리안느",
+      "summary": "마리안느 셀프웨딩 드레스 대여 상품입니다.",
+      "category": "드레스",
+      "price": "139,000원",
+      "keywords": [
+        "대여",
+        "드레스",
+        "마리안느",
+        "셀프 웨딩",
+        "셀프웨딩",
+        "웨딩 스냅",
+        "리마인드 웨딩",
+        "브라이덜 샤워"
+      ],
+      "images": [
+        "images/products/store-83142692569/1789630344158-feac375a.jpg"
+      ],
+      "buyLabel": "상품 문의하기",
+      "buyLink": "https://silua-aideabank.progen-web.workers.dev/contact?product=%EB%A7%88%EB%A6%AC%EC%95%88%EB%8A%90&productId=store-83142692569",
+      "buyNotice": "상품명과 희망 대여 일정을 알려주시면 재고와 이용 방법을 안내해 드립니다.",
+      "sections": [
+        {
+          "type": "rich_text",
+          "body": "<p>마리안느 셀프웨딩 드레스 대여 상품입니다.</p><p>구매·대여 가능 여부와 희망 일정은 문의 페이지에서 상담해 주세요.</p>"
+        }
+      ]
+    },
+    {
+      "id": "store-82603705270",
+      "published": true,
+      "featured": false,
+      "label": "RENTAL",
+      "name": "아넬로 드레스",
+      "summary": "아넬로 드레스 이브닝·파티 드레스 대여 상품입니다.",
+      "category": "드레스",
+      "price": "185,000원",
+      "keywords": [
+        "대여",
+        "드레스",
+        "아넬로 드레스",
+        "이브닝",
+        "파티",
+        "연주회"
+      ],
+      "images": [
+        "images/products/store-82603705270/1789630349470-ef4d0a00.jpg"
+      ],
+      "buyLabel": "상품 문의하기",
+      "buyLink": "https://silua-aideabank.progen-web.workers.dev/contact?product=%EC%95%84%EB%84%AC%EB%A1%9C%20%EB%93%9C%EB%A0%88%EC%8A%A4&productId=store-82603705270",
+      "buyNotice": "상품명과 희망 대여 일정을 알려주시면 재고와 이용 방법을 안내해 드립니다.",
+      "sections": [
+        {
+          "type": "rich_text",
+          "body": "<p>아넬로 드레스 이브닝·파티 드레스 대여 상품입니다.</p><p>구매·대여 가능 여부와 희망 일정은 문의 페이지에서 상담해 주세요.</p>"
+        }
+      ]
+    },
+    {
+      "id": "store-82744979271",
+      "published": true,
+      "featured": false,
+      "label": "RENTAL",
+      "name": "세렌디피티",
+      "summary": "세렌디피티 셀프웨딩 드레스 대여 상품입니다.",
+      "category": "드레스",
+      "price": "85,000원",
+      "keywords": [
+        "대여",
+        "드레스",
+        "세렌디피티",
+        "셀프 웨딩",
+        "셀프웨딩",
+        "웨딩 스냅",
+        "리마인드 웨딩",
+        "브라이덜 샤워"
+      ],
+      "images": [
+        "images/products/store-82744979271/1789630355953-1750ed5c.jpg"
+      ],
+      "buyLabel": "상품 문의하기",
+      "buyLink": "https://silua-aideabank.progen-web.workers.dev/contact?product=%EC%84%B8%EB%A0%8C%EB%94%94%ED%94%BC%ED%8B%B0&productId=store-82744979271",
+      "buyNotice": "상품명과 희망 대여 일정을 알려주시면 재고와 이용 방법을 안내해 드립니다.",
+      "sections": [
+        {
+          "type": "rich_text",
+          "body": "<p>세렌디피티 셀프웨딩 드레스 대여 상품입니다.</p><p>구매·대여 가능 여부와 희망 일정은 문의 페이지에서 상담해 주세요.</p>"
+        }
+      ]
+    },
+    {
+      "id": "store-82748463477",
+      "published": true,
+      "featured": false,
+      "label": "RENTAL",
+      "name": "루나 드레스",
+      "summary": "루나 드레스 셀프웨딩 드레스 대여 상품입니다.",
+      "category": "드레스",
+      "price": "79,000원",
+      "keywords": [
+        "대여",
+        "드레스",
+        "루나 드레스",
+        "셀프 웨딩",
+        "셀프웨딩",
+        "웨딩 스냅",
+        "리마인드 웨딩",
+        "브라이덜 샤워"
+      ],
+      "images": [
+        "images/products/store-82748463477/1789630362457-f714ab6b.jpg"
+      ],
+      "buyLabel": "상품 문의하기",
+      "buyLink": "https://silua-aideabank.progen-web.workers.dev/contact?product=%EB%A3%A8%EB%82%98%20%EB%93%9C%EB%A0%88%EC%8A%A4&productId=store-82748463477",
+      "buyNotice": "상품명과 희망 대여 일정을 알려주시면 재고와 이용 방법을 안내해 드립니다.",
+      "sections": [
+        {
+          "type": "rich_text",
+          "body": "<p>루나 드레스 셀프웨딩 드레스 대여 상품입니다.</p><p>구매·대여 가능 여부와 희망 일정은 문의 페이지에서 상담해 주세요.</p>"
+        }
+      ]
+    },
+    {
+      "id": "store-82757442761",
+      "published": true,
+      "featured": false,
+      "label": "RENTAL",
+      "name": "엔초",
+      "summary": "엔초 셀프웨딩 드레스 대여 상품입니다.",
+      "category": "드레스",
+      "price": "175,000원",
+      "keywords": [
+        "대여",
+        "드레스",
+        "엔초",
+        "셀프 웨딩",
+        "셀프웨딩",
+        "웨딩 스냅",
+        "리마인드 웨딩",
+        "브라이덜 샤워"
+      ],
+      "images": [
+        "images/products/store-82757442761/1789630368819-6ad0b669.jpg"
+      ],
+      "buyLabel": "상품 문의하기",
+      "buyLink": "https://silua-aideabank.progen-web.workers.dev/contact?product=%EC%97%94%EC%B4%88&productId=store-82757442761",
+      "buyNotice": "상품명과 희망 대여 일정을 알려주시면 재고와 이용 방법을 안내해 드립니다.",
+      "sections": [
+        {
+          "type": "rich_text",
+          "body": "<p>엔초 셀프웨딩 드레스 대여 상품입니다.</p><p>구매·대여 가능 여부와 희망 일정은 문의 페이지에서 상담해 주세요.</p>"
+        }
+      ]
+    },
+    {
+      "id": "store-83144612024",
+      "published": true,
+      "featured": false,
+      "label": "RENTAL",
+      "name": "베로니카",
+      "summary": "베로니카 이브닝·파티 드레스 대여 상품입니다.",
+      "category": "드레스",
+      "price": "159,000원",
+      "keywords": [
+        "대여",
+        "드레스",
+        "베로니카",
+        "이브닝",
+        "파티",
+        "연주회"
+      ],
+      "images": [
+        "images/products/store-83144612024/1789630375867-600f99d1.jpg"
+      ],
+      "buyLabel": "상품 문의하기",
+      "buyLink": "https://silua-aideabank.progen-web.workers.dev/contact?product=%EB%B2%A0%EB%A1%9C%EB%8B%88%EC%B9%B4&productId=store-83144612024",
+      "buyNotice": "상품명과 희망 대여 일정을 알려주시면 재고와 이용 방법을 안내해 드립니다.",
+      "sections": [
+        {
+          "type": "rich_text",
+          "body": "<p>베로니카 이브닝·파티 드레스 대여 상품입니다.</p><p>구매·대여 가능 여부와 희망 일정은 문의 페이지에서 상담해 주세요.</p>"
+        }
+      ]
+    },
+    {
+      "id": "store-82603705251",
+      "published": true,
+      "featured": false,
+      "label": "RENTAL",
+      "name": "아젤리아",
+      "summary": "아젤리아 셀프웨딩 드레스 대여 상품입니다.",
+      "category": "드레스",
+      "price": "59,000원",
+      "keywords": [
+        "대여",
+        "드레스",
+        "아젤리아",
+        "셀프 웨딩",
+        "셀프웨딩",
+        "웨딩 스냅",
+        "리마인드 웨딩",
+        "브라이덜 샤워"
+      ],
+      "images": [
+        "images/products/store-82603705251/1789630382537-0d77a04f.jpg"
+      ],
+      "buyLabel": "상품 문의하기",
+      "buyLink": "https://silua-aideabank.progen-web.workers.dev/contact?product=%EC%95%84%EC%A0%A4%EB%A6%AC%EC%95%84&productId=store-82603705251",
+      "buyNotice": "상품명과 희망 대여 일정을 알려주시면 재고와 이용 방법을 안내해 드립니다.",
+      "sections": [
+        {
+          "type": "rich_text",
+          "body": "<p>아젤리아 셀프웨딩 드레스 대여 상품입니다.</p><p>구매·대여 가능 여부와 희망 일정은 문의 페이지에서 상담해 주세요.</p>"
+        }
+      ]
+    },
+    {
+      "id": "store-83143770567",
+      "published": true,
+      "featured": false,
+      "label": "RENTAL",
+      "name": "미카도실크 세트",
+      "summary": "미카도실크 세트 셀프웨딩 드레스 대여 상품입니다.",
+      "category": "드레스",
+      "price": "145,000원",
+      "keywords": [
+        "대여",
+        "드레스",
+        "미카도실크 세트",
+        "셀프 웨딩",
+        "셀프웨딩",
+        "웨딩 스냅",
+        "리마인드 웨딩",
+        "브라이덜 샤워"
+      ],
+      "images": [
+        "images/products/store-83143770567/1789630386908-bcf73302.jpg"
+      ],
+      "buyLabel": "상품 문의하기",
+      "buyLink": "https://silua-aideabank.progen-web.workers.dev/contact?product=%EB%AF%B8%EC%B9%B4%EB%8F%84%EC%8B%A4%ED%81%AC%20%EC%84%B8%ED%8A%B8&productId=store-83143770567",
+      "buyNotice": "상품명과 희망 대여 일정을 알려주시면 재고와 이용 방법을 안내해 드립니다.",
+      "sections": [
+        {
+          "type": "rich_text",
+          "body": "<p>미카도실크 세트 셀프웨딩 드레스 대여 상품입니다.</p><p>구매·대여 가능 여부와 희망 일정은 문의 페이지에서 상담해 주세요.</p>"
+        }
+      ]
+    },
+    {
+      "id": "store-82603705254",
+      "published": true,
+      "featured": false,
+      "label": "RENTAL",
+      "name": "후리지아",
+      "summary": "후리지아 이브닝·파티 드레스 대여 상품입니다.",
+      "category": "드레스",
+      "price": "가격 문의",
+      "keywords": [
+        "대여",
+        "드레스",
+        "후리지아",
+        "이브닝",
+        "파티",
+        "연주회"
+      ],
+      "images": [
+        "images/products/store-82603705254/1789630392451-d7803326.jpg"
+      ],
+      "buyLabel": "상품 문의하기",
+      "buyLink": "https://silua-aideabank.progen-web.workers.dev/contact?product=%ED%9B%84%EB%A6%AC%EC%A7%80%EC%95%84&productId=store-82603705254",
+      "buyNotice": "상품명과 희망 대여 일정을 알려주시면 재고와 이용 방법을 안내해 드립니다.",
+      "sections": [
+        {
+          "type": "rich_text",
+          "body": "<p>후리지아 이브닝·파티 드레스 대여 상품입니다.</p><p>구매·대여 가능 여부와 희망 일정은 문의 페이지에서 상담해 주세요.</p>"
+        }
+      ]
+    },
+    {
+      "id": "store-82603705255",
+      "published": true,
+      "featured": false,
+      "label": "RENTAL",
+      "name": "라넌클러스",
+      "summary": "라넌클러스 이브닝·파티 드레스 대여 상품입니다.",
+      "category": "드레스",
+      "price": "가격 문의",
+      "keywords": [
+        "대여",
+        "드레스",
+        "라넌클러스",
+        "이브닝",
+        "파티",
+        "연주회"
+      ],
+      "images": [
+        "images/products/store-82603705255/1789630398179-185d09e1.jpg"
+      ],
+      "buyLabel": "상품 문의하기",
+      "buyLink": "https://silua-aideabank.progen-web.workers.dev/contact?product=%EB%9D%BC%EB%84%8C%ED%81%B4%EB%9F%AC%EC%8A%A4&productId=store-82603705255",
+      "buyNotice": "상품명과 희망 대여 일정을 알려주시면 재고와 이용 방법을 안내해 드립니다.",
+      "sections": [
+        {
+          "type": "rich_text",
+          "body": "<p>라넌클러스 이브닝·파티 드레스 대여 상품입니다.</p><p>구매·대여 가능 여부와 희망 일정은 문의 페이지에서 상담해 주세요.</p>"
+        }
+      ]
+    },
+    {
+      "id": "store-82603705272",
+      "published": true,
+      "featured": false,
+      "label": "RENTAL",
+      "name": "플라워 에메랄드",
+      "summary": "플라워 에메랄드 이브닝·파티 드레스 대여 상품입니다.",
+      "category": "드레스",
+      "price": "179,000원",
+      "keywords": [
+        "대여",
+        "드레스",
+        "플라워 에메랄드",
+        "이브닝",
+        "파티",
+        "연주회"
+      ],
+      "images": [
+        "images/products/store-82603705272/1789630404432-d101811e.jpg"
+      ],
+      "buyLabel": "상품 문의하기",
+      "buyLink": "https://silua-aideabank.progen-web.workers.dev/contact?product=%ED%94%8C%EB%9D%BC%EC%9B%8C%20%EC%97%90%EB%A9%94%EB%9E%84%EB%93%9C&productId=store-82603705272",
+      "buyNotice": "상품명과 희망 대여 일정을 알려주시면 재고와 이용 방법을 안내해 드립니다.",
+      "sections": [
+        {
+          "type": "rich_text",
+          "body": "<p>플라워 에메랄드 이브닝·파티 드레스 대여 상품입니다.</p><p>구매·대여 가능 여부와 희망 일정은 문의 페이지에서 상담해 주세요.</p>"
+        }
+      ]
+    },
+    {
+      "id": "store-82603705274",
+      "published": true,
+      "featured": false,
+      "label": "RENTAL",
+      "name": "화이트 메리엘",
+      "summary": "화이트 메리엘 이브닝·파티 드레스 대여 상품입니다.",
+      "category": "드레스",
+      "price": "가격 문의",
+      "keywords": [
+        "대여",
+        "드레스",
+        "화이트 메리엘",
+        "이브닝",
+        "파티",
+        "연주회"
+      ],
+      "images": [
+        "images/products/store-82603705274/1789630409735-f87ebbc0.jpg"
+      ],
+      "buyLabel": "상품 문의하기",
+      "buyLink": "https://silua-aideabank.progen-web.workers.dev/contact?product=%ED%99%94%EC%9D%B4%ED%8A%B8%20%EB%A9%94%EB%A6%AC%EC%97%98&productId=store-82603705274",
+      "buyNotice": "상품명과 희망 대여 일정을 알려주시면 재고와 이용 방법을 안내해 드립니다.",
+      "sections": [
+        {
+          "type": "rich_text",
+          "body": "<p>화이트 메리엘 이브닝·파티 드레스 대여 상품입니다.</p><p>구매·대여 가능 여부와 희망 일정은 문의 페이지에서 상담해 주세요.</p>"
+        }
+      ]
+    },
+    {
+      "id": "store-82603705258",
+      "published": true,
+      "featured": false,
+      "label": "RENTAL",
+      "name": "올리비아 슬림",
+      "summary": "올리비아 슬림 셀프웨딩 드레스 대여 상품입니다.",
+      "category": "드레스",
+      "price": "가격 문의",
+      "keywords": [
+        "대여",
+        "드레스",
+        "올리비아 슬림",
+        "셀프 웨딩",
+        "셀프웨딩",
+        "웨딩 스냅",
+        "리마인드 웨딩",
+        "브라이덜 샤워"
+      ],
+      "images": [
+        "images/products/store-82603705258/1789630415194-9492c080.jpg"
+      ],
+      "buyLabel": "상품 문의하기",
+      "buyLink": "https://silua-aideabank.progen-web.workers.dev/contact?product=%EC%98%AC%EB%A6%AC%EB%B9%84%EC%95%84%20%EC%8A%AC%EB%A6%BC&productId=store-82603705258",
+      "buyNotice": "상품명과 희망 대여 일정을 알려주시면 재고와 이용 방법을 안내해 드립니다.",
+      "sections": [
+        {
+          "type": "rich_text",
+          "body": "<p>올리비아 슬림 셀프웨딩 드레스 대여 상품입니다.</p><p>구매·대여 가능 여부와 희망 일정은 문의 페이지에서 상담해 주세요.</p>"
+        }
+      ]
+    },
+    {
+      "id": "store-5059183896",
+      "published": true,
+      "featured": false,
+      "label": "RENTAL",
+      "name": "플로리아",
+      "summary": "플로리아 이브닝·파티 드레스 대여 상품입니다.",
+      "category": "드레스",
+      "price": "가격 문의",
+      "keywords": [
+        "대여",
+        "드레스",
+        "플로리아",
+        "이브닝",
+        "파티",
+        "연주회"
+      ],
+      "images": [
+        "images/products/store-5059183896/1789630421313-ee46fcf3.jpg"
+      ],
+      "buyLabel": "상품 문의하기",
+      "buyLink": "https://silua-aideabank.progen-web.workers.dev/contact?product=%ED%94%8C%EB%A1%9C%EB%A6%AC%EC%95%84&productId=store-5059183896",
+      "buyNotice": "상품명과 희망 대여 일정을 알려주시면 재고와 이용 방법을 안내해 드립니다.",
+      "sections": [
+        {
+          "type": "rich_text",
+          "body": "<p>플로리아 이브닝·파티 드레스 대여 상품입니다.</p><p>구매·대여 가능 여부와 희망 일정은 문의 페이지에서 상담해 주세요.</p>"
+        }
+      ]
+    },
+    {
+      "id": "store-5059183887",
+      "published": true,
+      "featured": false,
+      "label": "RENTAL",
+      "name": "골드마린",
+      "summary": "골드마린 이브닝·파티 드레스 대여 상품입니다.",
+      "category": "드레스",
+      "price": "가격 문의",
+      "keywords": [
+        "대여",
+        "드레스",
+        "골드마린",
+        "이브닝",
+        "파티",
+        "연주회"
+      ],
+      "images": [
+        "images/products/store-5059183887/1789630427284-88f90997.jpg"
+      ],
+      "buyLabel": "상품 문의하기",
+      "buyLink": "https://silua-aideabank.progen-web.workers.dev/contact?product=%EA%B3%A8%EB%93%9C%EB%A7%88%EB%A6%B0&productId=store-5059183887",
+      "buyNotice": "상품명과 희망 대여 일정을 알려주시면 재고와 이용 방법을 안내해 드립니다.",
+      "sections": [
+        {
+          "type": "rich_text",
+          "body": "<p>골드마린 이브닝·파티 드레스 대여 상품입니다.</p><p>구매·대여 가능 여부와 희망 일정은 문의 페이지에서 상담해 주세요.</p>"
+        }
+      ]
+    },
+    {
+      "id": "store-5059183888",
+      "published": true,
+      "featured": false,
+      "label": "RENTAL",
+      "name": "화이트마린",
+      "summary": "화이트마린 이브닝·파티 드레스 대여 상품입니다.",
+      "category": "드레스",
+      "price": "가격 문의",
+      "keywords": [
+        "대여",
+        "드레스",
+        "화이트마린",
+        "이브닝",
+        "파티",
+        "연주회"
+      ],
+      "images": [
+        "images/products/store-5059183888/1789630432975-068f101a.jpg"
+      ],
+      "buyLabel": "상품 문의하기",
+      "buyLink": "https://silua-aideabank.progen-web.workers.dev/contact?product=%ED%99%94%EC%9D%B4%ED%8A%B8%EB%A7%88%EB%A6%B0&productId=store-5059183888",
+      "buyNotice": "상품명과 희망 대여 일정을 알려주시면 재고와 이용 방법을 안내해 드립니다.",
+      "sections": [
+        {
+          "type": "rich_text",
+          "body": "<p>화이트마린 이브닝·파티 드레스 대여 상품입니다.</p><p>구매·대여 가능 여부와 희망 일정은 문의 페이지에서 상담해 주세요.</p>"
+        }
+      ]
+    },
+    {
+      "id": "store-82603705261",
+      "published": true,
+      "featured": false,
+      "label": "RENTAL",
+      "name": "플로렌스",
+      "summary": "플로렌스 이브닝·파티 드레스 대여 상품입니다.",
+      "category": "드레스",
+      "price": "가격 문의",
+      "keywords": [
+        "대여",
+        "드레스",
+        "플로렌스",
+        "이브닝",
+        "파티",
+        "연주회"
+      ],
+      "images": [
+        "images/products/store-82603705261/1789630438780-05c2e13e.jpg"
+      ],
+      "buyLabel": "상품 문의하기",
+      "buyLink": "https://silua-aideabank.progen-web.workers.dev/contact?product=%ED%94%8C%EB%A1%9C%EB%A0%8C%EC%8A%A4&productId=store-82603705261",
+      "buyNotice": "상품명과 희망 대여 일정을 알려주시면 재고와 이용 방법을 안내해 드립니다.",
+      "sections": [
+        {
+          "type": "rich_text",
+          "body": "<p>플로렌스 이브닝·파티 드레스 대여 상품입니다.</p><p>구매·대여 가능 여부와 희망 일정은 문의 페이지에서 상담해 주세요.</p>"
+        }
+      ]
+    },
+    {
+      "id": "store-82603705259",
+      "published": true,
+      "featured": false,
+      "label": "RENTAL",
+      "name": "엘라슬림",
+      "summary": "엘라슬림 셀프웨딩 드레스 대여 상품입니다.",
+      "category": "드레스",
+      "price": "가격 문의",
+      "keywords": [
+        "대여",
+        "드레스",
+        "엘라슬림",
+        "셀프 웨딩",
+        "셀프웨딩",
+        "웨딩 스냅",
+        "리마인드 웨딩",
+        "브라이덜 샤워"
+      ],
+      "images": [
+        "images/products/store-82603705259/1789630444366-17f8cca7.jpg"
+      ],
+      "buyLabel": "상품 문의하기",
+      "buyLink": "https://silua-aideabank.progen-web.workers.dev/contact?product=%EC%97%98%EB%9D%BC%EC%8A%AC%EB%A6%BC&productId=store-82603705259",
+      "buyNotice": "상품명과 희망 대여 일정을 알려주시면 재고와 이용 방법을 안내해 드립니다.",
+      "sections": [
+        {
+          "type": "rich_text",
+          "body": "<p>엘라슬림 셀프웨딩 드레스 대여 상품입니다.</p><p>구매·대여 가능 여부와 희망 일정은 문의 페이지에서 상담해 주세요.</p>"
+        }
+      ]
+    },
+    {
+      "id": "store-82603705262",
+      "published": true,
+      "featured": false,
+      "label": "RENTAL",
+      "name": "아델린",
+      "summary": "아델린 셀프웨딩 드레스 대여 상품입니다.",
+      "category": "드레스",
+      "price": "가격 문의",
+      "keywords": [
+        "대여",
+        "드레스",
+        "아델린",
+        "셀프 웨딩",
+        "셀프웨딩",
+        "웨딩 스냅",
+        "리마인드 웨딩",
+        "브라이덜 샤워"
+      ],
+      "images": [
+        "images/products/store-82603705262/1789630450058-5ca4e062.jpg"
+      ],
+      "buyLabel": "상품 문의하기",
+      "buyLink": "https://silua-aideabank.progen-web.workers.dev/contact?product=%EC%95%84%EB%8D%B8%EB%A6%B0&productId=store-82603705262",
+      "buyNotice": "상품명과 희망 대여 일정을 알려주시면 재고와 이용 방법을 안내해 드립니다.",
+      "sections": [
+        {
+          "type": "rich_text",
+          "body": "<p>아델린 셀프웨딩 드레스 대여 상품입니다.</p><p>구매·대여 가능 여부와 희망 일정은 문의 페이지에서 상담해 주세요.</p>"
+        }
+      ]
+    },
+    {
+      "id": "store-82757448628",
+      "published": true,
+      "featured": false,
+      "label": "RENTAL",
+      "name": "딜라잇",
+      "summary": "딜라잇 이브닝·파티 드레스 대여 상품입니다.",
+      "category": "드레스",
+      "price": "가격 문의",
+      "keywords": [
+        "대여",
+        "드레스",
+        "딜라잇",
+        "이브닝",
+        "파티",
+        "연주회"
+      ],
+      "images": [
+        "images/products/store-82757448628/1789630455670-312d0e93.jpg"
+      ],
+      "buyLabel": "상품 문의하기",
+      "buyLink": "https://silua-aideabank.progen-web.workers.dev/contact?product=%EB%94%9C%EB%9D%BC%EC%9E%87&productId=store-82757448628",
+      "buyNotice": "상품명과 희망 대여 일정을 알려주시면 재고와 이용 방법을 안내해 드립니다.",
+      "sections": [
+        {
+          "type": "rich_text",
+          "body": "<p>딜라잇 이브닝·파티 드레스 대여 상품입니다.</p><p>구매·대여 가능 여부와 희망 일정은 문의 페이지에서 상담해 주세요.</p>"
+        }
+      ]
+    },
+    {
+      "id": "store-82603705250",
+      "published": true,
+      "featured": false,
+      "label": "RENTAL",
+      "name": "카라 머메이드",
+      "summary": "카라 머메이드 셀프웨딩 드레스 대여 상품입니다.",
+      "category": "드레스",
+      "price": "가격 문의",
+      "keywords": [
+        "대여",
+        "드레스",
+        "카라 머메이드",
+        "셀프 웨딩",
+        "셀프웨딩",
+        "웨딩 스냅",
+        "리마인드 웨딩",
+        "브라이덜 샤워"
+      ],
+      "images": [
+        "images/products/store-82603705250/1789630461959-49ecfe6d.jpg"
+      ],
+      "buyLabel": "상품 문의하기",
+      "buyLink": "https://silua-aideabank.progen-web.workers.dev/contact?product=%EC%B9%B4%EB%9D%BC%20%EB%A8%B8%EB%A9%94%EC%9D%B4%EB%93%9C&productId=store-82603705250",
+      "buyNotice": "상품명과 희망 대여 일정을 알려주시면 재고와 이용 방법을 안내해 드립니다.",
+      "sections": [
+        {
+          "type": "rich_text",
+          "body": "<p>카라 머메이드 셀프웨딩 드레스 대여 상품입니다.</p><p>구매·대여 가능 여부와 희망 일정은 문의 페이지에서 상담해 주세요.</p>"
+        }
+      ]
+    },
+    {
+      "id": "store-82603705271",
+      "published": true,
+      "featured": false,
+      "label": "RENTAL",
+      "name": "에메랄드 팜드레스",
+      "summary": "에메랄드 팜드레스 이브닝·파티 드레스 대여 상품입니다.",
+      "category": "드레스",
+      "price": "가격 문의",
+      "keywords": [
+        "대여",
+        "드레스",
+        "에메랄드 팜드레스",
+        "이브닝",
+        "파티",
+        "연주회"
+      ],
+      "images": [
+        "images/products/store-82603705271/1789630467844-30a1bbf8.jpg"
+      ],
+      "buyLabel": "상품 문의하기",
+      "buyLink": "https://silua-aideabank.progen-web.workers.dev/contact?product=%EC%97%90%EB%A9%94%EB%9E%84%EB%93%9C%20%ED%8C%9C%EB%93%9C%EB%A0%88%EC%8A%A4&productId=store-82603705271",
+      "buyNotice": "상품명과 희망 대여 일정을 알려주시면 재고와 이용 방법을 안내해 드립니다.",
+      "sections": [
+        {
+          "type": "rich_text",
+          "body": "<p>에메랄드 팜드레스 이브닝·파티 드레스 대여 상품입니다.</p><p>구매·대여 가능 여부와 희망 일정은 문의 페이지에서 상담해 주세요.</p>"
+        }
+      ]
+    },
+    {
+      "id": "store-83143982420",
+      "published": true,
+      "featured": false,
+      "label": "RENTAL",
+      "name": "아마릴리스",
+      "summary": "아마릴리스 셀프웨딩 드레스 대여 상품입니다.",
+      "category": "드레스",
+      "price": "가격 문의",
+      "keywords": [
+        "대여",
+        "드레스",
+        "아마릴리스",
+        "셀프 웨딩",
+        "셀프웨딩",
+        "웨딩 스냅",
+        "리마인드 웨딩",
+        "브라이덜 샤워"
+      ],
+      "images": [
+        "images/products/store-83143982420/1789630474431-db06ed51.jpg"
+      ],
+      "buyLabel": "상품 문의하기",
+      "buyLink": "https://silua-aideabank.progen-web.workers.dev/contact?product=%EC%95%84%EB%A7%88%EB%A6%B4%EB%A6%AC%EC%8A%A4&productId=store-83143982420",
+      "buyNotice": "상품명과 희망 대여 일정을 알려주시면 재고와 이용 방법을 안내해 드립니다.",
+      "sections": [
+        {
+          "type": "rich_text",
+          "body": "<p>아마릴리스 셀프웨딩 드레스 대여 상품입니다.</p><p>구매·대여 가능 여부와 희망 일정은 문의 페이지에서 상담해 주세요.</p>"
+        }
+      ]
+    },
+    {
+      "id": "store-82603705263",
+      "published": true,
+      "featured": false,
+      "label": "RENTAL",
+      "name": "화이트 코랄",
+      "summary": "화이트 코랄 이브닝·파티 드레스 대여 상품입니다.",
+      "category": "드레스",
+      "price": "가격 문의",
+      "keywords": [
+        "대여",
+        "드레스",
+        "화이트 코랄",
+        "이브닝",
+        "파티",
+        "연주회"
+      ],
+      "images": [
+        "images/products/store-82603705263/1789630480381-54ff7070.jpg"
+      ],
+      "buyLabel": "상품 문의하기",
+      "buyLink": "https://silua-aideabank.progen-web.workers.dev/contact?product=%ED%99%94%EC%9D%B4%ED%8A%B8%20%EC%BD%94%EB%9E%84&productId=store-82603705263",
+      "buyNotice": "상품명과 희망 대여 일정을 알려주시면 재고와 이용 방법을 안내해 드립니다.",
+      "sections": [
+        {
+          "type": "rich_text",
+          "body": "<p>화이트 코랄 이브닝·파티 드레스 대여 상품입니다.</p><p>구매·대여 가능 여부와 희망 일정은 문의 페이지에서 상담해 주세요.</p>"
         }
       ]
     }
