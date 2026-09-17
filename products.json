@@ -2,125 +2,250 @@
   "_설명": "브랜드 담당자가 사이트 관리자에서 제품과 상세페이지를 관리합니다. 학생은 이 파일을 직접 수정하지 않습니다.",
   "products": [
     {
-      "id": "43fbe2a4-5720-4db9-8b05-e6600d7566e5",
-      "published": false,
-      "featured": false,
-      "label": "NEW",
-      "name": "새 제품",
-      "summary": "",
-      "category": "",
-      "price": "",
-      "keywords": [],
-      "images": [],
-      "buyLabel": "구매하기",
-      "buyLink": "",
-      "buyNotice": "",
-      "sections": [
-        {
-          "type": "rich_text",
-          "body": "<p><br></p>"
-        }
-      ]
-    },
-    {
-      "id": "b1033315-1eea-4c55-b72f-93aaed73ee3e",
-      "published": false,
-      "featured": false,
-      "label": "NEW",
-      "name": "새 제품",
-      "summary": "",
-      "category": "",
-      "price": "",
-      "keywords": [],
-      "images": [],
-      "buyLabel": "구매하기",
-      "buyLink": "",
-      "buyNotice": "",
-      "sections": [
-        {
-          "type": "rich_text",
-          "body": "<p><br></p>"
-        }
-      ]
-    },
-    {
-      "id": "look-01",
+      "id": "tulip",
       "published": true,
       "featured": true,
-      "label": "WOMEN · CARDIGAN",
-      "name": "다이널 부클 자수 니트 가디건",
-      "summary": "포근한 울 블렌딩 소재와 부클 공룡 자수로 포인트를 준 스탠다드 핏 가디건",
-      "category": "Cardigan",
-      "price": "",
+      "label": "RENTAL",
+      "name": "튤립 레이스 드레스",
+      "summary": "섬세한 레이스와 단정한 실루엣의 셀프웨딩 드레스.",
+      "category": "셀프 웨딩",
+      "price": "210,000원",
       "keywords": [
-        "아이보리 · 그레이 · 네이비",
-        "울 블렌딩",
-        "부클 자수"
+        "셀프 웨딩",
+        "셀프웨딩",
+        "웨딩 스냅",
+        "리마인드 웨딩",
+        "대여",
+        "브라이덜 샤워",
+        "레이스 드레스"
       ],
       "images": [
-        "images/products/look-01/1787721859194-2b0dbc5f.webp"
+        "images/products/tulip/1789628917423-fb517a12.jpg"
       ],
-      "buyLabel": "구매하기",
-      "buyLink": "",
-      "buyNotice": "계좌 0000-000-0000 김*수",
+      "buyLabel": "상품 문의하기",
+      "buyLink": "https://silua-aideabank.progen-web.workers.dev/contact?product=%ED%8A%A4%EB%A6%BD%20%EB%A0%88%EC%9D%B4%EC%8A%A4%20%EB%93%9C%EB%A0%88%EC%8A%A4&productId=tulip",
+      "buyNotice": "상품명과 희망 대여 일정을 알려주시면 재고와 이용 방법을 안내해 드립니다.",
       "sections": [
         {
           "type": "rich_text",
-          "body": "<p><img src=\"images/products/look-01/1787721861860-fcbca1cc.jpg\" alt=\"다이널 부클 자수 니트 가디건 스타일 이미지\"></p><p><img src=\"images/products/look-01/1787721864645-dfa7a337.jpg\" alt=\"다이널 부클 자수 니트 가디건 컬러와 상품 설명\"></p><p><img src=\"images/products/look-01/1787721867694-3d3d0607.jpg\" alt=\"다이널 부클 자수 니트 가디건 디테일 포인트\"></p><p><img src=\"images/products/look-01/1787721870841-2a9b9f75.jpg\" alt=\"다이널 부클 자수 니트 가디건 상품 디테일\"></p><p><img src=\"images/products/look-01/1787721874055-2a708341.jpg\" alt=\"다이널 부클 자수 니트 가디건 사이즈와 소재 정보\"></p>"
+          "body": "<p>섬세한 레이스와 단정한 실루엣의 셀프웨딩 드레스.</p><p>구매·대여 가능 여부와 희망 일정은 문의 페이지에서 상담해 주세요.</p>"
         }
       ]
     },
     {
-      "id": "look-02",
+      "id": "heart-pearl",
       "published": true,
       "featured": true,
-      "label": "MEN · KNIT",
-      "name": "남성 트임넥 니트",
-      "summary": "부드러운 니트 텍스처와 단정한 트임넥 디자인을 갖춘 남성 데일리 니트",
-      "category": "Knit",
-      "price": "",
+      "label": "RENTAL",
+      "name": "하트넥 펄 드레스",
+      "summary": "하트넥과 은은한 펄 디테일이 돋보이는 드레스.",
+      "category": "셀프 웨딩",
+      "price": "216,000원",
       "keywords": [
-        "아이보리 · 연그레이 · 커피 · 진그레이",
-        "트임넥",
-        "M–4XL"
+        "셀프 웨딩",
+        "셀프웨딩",
+        "웨딩 스냅",
+        "리마인드 웨딩",
+        "대여",
+        "브라이덜 샤워",
+        "하트넥 드레스"
       ],
       "images": [
-        "images/products/look-02/1787721875951-30515286.webp"
+        "images/products/heart-pearl/1789628936839-678eaf2f.jpg"
       ],
-      "buyLabel": "구매하기",
-      "buyLink": "",
-      "buyNotice": "",
+      "buyLabel": "상품 문의하기",
+      "buyLink": "https://silua-aideabank.progen-web.workers.dev/contact?product=%ED%95%98%ED%8A%B8%EB%84%A5%20%ED%8E%84%20%EB%93%9C%EB%A0%88%EC%8A%A4&productId=heart-pearl",
+      "buyNotice": "상품명과 희망 대여 일정을 알려주시면 재고와 이용 방법을 안내해 드립니다.",
       "sections": [
         {
           "type": "rich_text",
-          "body": "<p><img src=\"images/products/look-02/1787721878184-c17aee33.png\" alt=\"J nd O 브랜드 소개\"></p><p><img src=\"images/products/look-02/1787721879918-f9597545.jpg\" alt=\"남성 트임넥 니트 원단 디테일\"></p><p><img src=\"images/products/look-02/1787721881841-68833463.jpg\" alt=\"남성 트임넥 니트 컬러 구성\"></p><p><img src=\"images/products/look-02/1787721883940-f8521541.png\" alt=\"남성 트임넥 니트 사이즈 표\"></p><p><img src=\"images/products/look-02/1787721885287-19652e08.png\" alt=\"남성 트임넥 니트 측정 안내\"></p>"
+          "body": "<p>하트넥과 은은한 펄 디테일이 돋보이는 드레스.</p><p>구매·대여 가능 여부와 희망 일정은 문의 페이지에서 상담해 주세요.</p>"
         }
       ]
     },
     {
-      "id": "look-03",
+      "id": "vneck-lace",
       "published": true,
       "featured": true,
-      "label": "WOMEN · JACKET",
-      "name": "린넨 크롭 반팔 자켓",
-      "summary": "린넨과 레이온 혼방의 내추럴한 질감이 돋보이는 가벼운 크롭 반팔 자켓",
-      "category": "Jacket",
-      "price": "",
+      "label": "RENTAL",
+      "name": "브이넥 레이스 드레스",
+      "summary": "브이넥 레이스 보디스와 유연한 스커트가 조화를 이루는 드레스.",
+      "category": "셀프 웨딩",
+      "price": "216,000원",
       "keywords": [
-        "연베이지 · 블랙",
-        "린넨 혼방",
-        "크롭 기장"
+        "셀프 웨딩",
+        "셀프웨딩",
+        "웨딩 스냅",
+        "리마인드 웨딩",
+        "대여",
+        "브라이덜 샤워",
+        "브이넥 드레스"
       ],
       "images": [
-        "images/products/look-03/1787721886985-b456d1fb.webp"
+        "images/products/vneck-lace/1789628942488-3b7fae59.jpg"
       ],
-      "buyLabel": "구매하기",
-      "buyLink": "",
-      "buyNotice": "",
+      "buyLabel": "상품 문의하기",
+      "buyLink": "https://silua-aideabank.progen-web.workers.dev/contact?product=%EB%B8%8C%EC%9D%B4%EB%84%A5%20%EB%A0%88%EC%9D%B4%EC%8A%A4%20%EB%93%9C%EB%A0%88%EC%8A%A4&productId=vneck-lace",
+      "buyNotice": "상품명과 희망 대여 일정을 알려주시면 재고와 이용 방법을 안내해 드립니다.",
       "sections": [
         {
           "type": "rich_text",
-          "body": "<p><img src=\"images/products/look-03/1787721889907-d94e9719.jpg\" alt=\"Peilit 브랜드와 배송 안내\"></p><p><img src=\"images/products/look-03/1787721892506-4210ede3.jpg\" alt=\"린넨 크롭 반팔 자켓 상품 설명과 디테일\"></p><p><img src=\"images/products/look-03/1787721896090-1f05ca9b.jpg\" alt=\"연베이지 린넨 크롭 반팔 자켓 착용 이미지\"></p><p><img src=\"images/products/look-03/1787721899623-cb77fedc.jpg\" alt=\"블랙 린넨 크롭 반팔 자켓 착용 이미지\"></p><p><img src=\"images/products/look-03/1787721902234-b79d7bbf.jpg\" alt=\"린넨 크롭 반팔 자켓 상품과 사이즈 정보\"></p>"
+          "body": "<p>브이넥 레이스 보디스와 유연한 스커트가 조화를 이루는 드레스.</p><p>구매·대여 가능 여부와 희망 일정은 문의 페이지에서 상담해 주세요.</p>"
+        }
+      ]
+    },
+    {
+      "id": "off-shoulder",
+      "published": true,
+      "featured": true,
+      "label": "RENTAL",
+      "name": "오프숄더 드레스",
+      "summary": "미니멀한 새틴과 오프숄더 라인이 돋보이는 드레스.",
+      "category": "셀프 웨딩",
+      "price": "168,000원",
+      "keywords": [
+        "셀프 웨딩",
+        "셀프웨딩",
+        "웨딩 스냅",
+        "리마인드 웨딩",
+        "대여",
+        "브라이덜 샤워",
+        "오프숄더 드레스"
+      ],
+      "images": [
+        "images/products/off-shoulder/1789628948887-2ed74f7e.jpg"
+      ],
+      "buyLabel": "상품 문의하기",
+      "buyLink": "https://silua-aideabank.progen-web.workers.dev/contact?product=%EC%98%A4%ED%94%84%EC%88%84%EB%8D%94%20%EB%93%9C%EB%A0%88%EC%8A%A4&productId=off-shoulder",
+      "buyNotice": "상품명과 희망 대여 일정을 알려주시면 재고와 이용 방법을 안내해 드립니다.",
+      "sections": [
+        {
+          "type": "rich_text",
+          "body": "<p>미니멀한 새틴과 오프숄더 라인이 돋보이는 드레스.</p><p>구매·대여 가능 여부와 희망 일정은 문의 페이지에서 상담해 주세요.</p>"
+        }
+      ]
+    },
+    {
+      "id": "pearl-off-shoulder",
+      "published": true,
+      "featured": true,
+      "label": "RENTAL",
+      "name": "진주 오프숄더 드레스",
+      "summary": "진주 장식과 오프숄더 실루엣을 담은 셀프웨딩 드레스.",
+      "category": "셀프 웨딩",
+      "price": "204,000원",
+      "keywords": [
+        "셀프 웨딩",
+        "셀프웨딩",
+        "웨딩 스냅",
+        "리마인드 웨딩",
+        "대여",
+        "브라이덜 샤워",
+        "진주 드레스"
+      ],
+      "images": [
+        "images/products/pearl-off-shoulder/1789628954217-6fe98c18.jpg"
+      ],
+      "buyLabel": "상품 문의하기",
+      "buyLink": "https://silua-aideabank.progen-web.workers.dev/contact?product=%EC%A7%84%EC%A3%BC%20%EC%98%A4%ED%94%84%EC%88%84%EB%8D%94%20%EB%93%9C%EB%A0%88%EC%8A%A4&productId=pearl-off-shoulder",
+      "buyNotice": "상품명과 희망 대여 일정을 알려주시면 재고와 이용 방법을 안내해 드립니다.",
+      "sections": [
+        {
+          "type": "rich_text",
+          "body": "<p>진주 장식과 오프숄더 실루엣을 담은 셀프웨딩 드레스.</p><p>구매·대여 가능 여부와 희망 일정은 문의 페이지에서 상담해 주세요.</p>"
+        }
+      ]
+    },
+    {
+      "id": "charonnier",
+      "published": true,
+      "featured": true,
+      "label": "RENTAL",
+      "name": "샤로니에 드레스",
+      "summary": "풍성한 벨라인으로 특별한 순간을 완성하는 웨딩 드레스.",
+      "category": "셀프 웨딩",
+      "price": "129,000원",
+      "keywords": [
+        "셀프 웨딩",
+        "셀프웨딩",
+        "웨딩 스냅",
+        "리마인드 웨딩",
+        "대여",
+        "브라이덜 샤워",
+        "벨라인 드레스"
+      ],
+      "images": [
+        "images/products/charonnier/1789628960717-5e94c00e.jpg"
+      ],
+      "buyLabel": "상품 문의하기",
+      "buyLink": "https://silua-aideabank.progen-web.workers.dev/contact?product=%EC%83%A4%EB%A1%9C%EB%8B%88%EC%97%90%20%EB%93%9C%EB%A0%88%EC%8A%A4&productId=charonnier",
+      "buyNotice": "상품명과 희망 대여 일정을 알려주시면 재고와 이용 방법을 안내해 드립니다.",
+      "sections": [
+        {
+          "type": "rich_text",
+          "body": "<p>풍성한 벨라인으로 특별한 순간을 완성하는 웨딩 드레스.</p><p>구매·대여 가능 여부와 희망 일정은 문의 페이지에서 상담해 주세요.</p>"
+        }
+      ]
+    },
+    {
+      "id": "anemone",
+      "published": true,
+      "featured": true,
+      "label": "RENTAL",
+      "name": "아네모네 드레스",
+      "summary": "퍼프소매와 러플 디테일이 자연스럽게 흐르는 원피스 드레스.",
+      "category": "셀프 웨딩",
+      "price": "53,000원",
+      "keywords": [
+        "셀프 웨딩",
+        "셀프웨딩",
+        "웨딩 스냅",
+        "리마인드 웨딩",
+        "대여",
+        "브라이덜 샤워",
+        "퍼프소매 드레스"
+      ],
+      "images": [
+        "images/products/anemone/1789628966401-2baeee7e.jpg"
+      ],
+      "buyLabel": "상품 문의하기",
+      "buyLink": "https://silua-aideabank.progen-web.workers.dev/contact?product=%EC%95%84%EB%84%A4%EB%AA%A8%EB%84%A4%20%EB%93%9C%EB%A0%88%EC%8A%A4&productId=anemone",
+      "buyNotice": "상품명과 희망 대여 일정을 알려주시면 재고와 이용 방법을 안내해 드립니다.",
+      "sections": [
+        {
+          "type": "rich_text",
+          "body": "<p>퍼프소매와 러플 디테일이 자연스럽게 흐르는 원피스 드레스.</p><p>구매·대여 가능 여부와 희망 일정은 문의 페이지에서 상담해 주세요.</p>"
+        }
+      ]
+    },
+    {
+      "id": "canna",
+      "published": true,
+      "featured": true,
+      "label": "RENTAL",
+      "name": "칸나 드레스",
+      "summary": "단정한 칼라와 랩 실루엣을 담은 스몰웨딩 드레스.",
+      "category": "셀프 웨딩",
+      "price": "45,000원",
+      "keywords": [
+        "셀프 웨딩",
+        "셀프웨딩",
+        "웨딩 스냅",
+        "리마인드 웨딩",
+        "대여",
+        "브라이덜 샤워",
+        "랩 드레스"
+      ],
+      "images": [
+        "images/products/canna/1789628988003-92554de1.jpg"
+      ],
+      "buyLabel": "상품 문의하기",
+      "buyLink": "https://silua-aideabank.progen-web.workers.dev/contact?product=%EC%B9%B8%EB%82%98%20%EB%93%9C%EB%A0%88%EC%8A%A4&productId=canna",
+      "buyNotice": "상품명과 희망 대여 일정을 알려주시면 재고와 이용 방법을 안내해 드립니다.",
+      "sections": [
+        {
+          "type": "rich_text",
+          "body": "<p>단정한 칼라와 랩 실루엣을 담은 스몰웨딩 드레스.</p><p>구매·대여 가능 여부와 희망 일정은 문의 페이지에서 상담해 주세요.</p>"
         }
       ]
     }
