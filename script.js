@@ -50,6 +50,15 @@ function updateNav() {
 updateNav();
 window.addEventListener("scroll", updateNav, { passive: true });
 
+if (!document.querySelector(".floating-book")) {
+  const bookingLink = document.createElement("a");
+  bookingLink.className = "floating-book";
+  bookingLink.href = "contact.html#reservation";
+  bookingLink.innerHTML = '<span aria-hidden="true">＋</span> 1:1 CONSULTATION';
+  bookingLink.setAttribute("aria-label", "1대1 스타일링 상담 예약");
+  document.body.appendChild(bookingLink);
+}
+
 const revealItems = document.querySelectorAll("[data-reveal]");
 if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
   const revealObserver = new IntersectionObserver((entries, observer) => {
