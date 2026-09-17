@@ -1,94 +1,74 @@
-// 모바일 메뉴(햄버거 ☰) 열고 닫기
+document.documentElement.classList.add("js");
+
 const toggle = document.querySelector(".nav-toggle");
 const menu = document.querySelector(".nav-menu");
 
+function closeMenu() {
+  if (!toggle || !menu) return;
+  menu.classList.remove("open");
+  toggle.classList.remove("is-open");
+  toggle.setAttribute("aria-expanded", "false");
+  toggle.setAttribute("aria-label", "메뉴 열기");
+  document.body.classList.remove("menu-open");
+}
+
 if (toggle && menu) {
-  toggle.addEventListener("click", () => menu.classList.toggle("open"));
-  // 메뉴 항목을 누르면 자동으로 닫히게
-  menu.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => menu.classList.remove("open"));
+  toggle.addEventListener("click", () => {
+    const open = !menu.classList.contains("open");
+    menu.classList.toggle("open", open);
+    toggle.classList.toggle("is-open", open);
+    toggle.setAttribute("aria-expanded", String(open));
+    toggle.setAttribute("aria-label", open ? "메뉴 닫기" : "메뉴 열기");
+    document.body.classList.toggle("menu-open", open);
+  });
+  menu.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeMenu));
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closeMenu();
   });
 }
 
-// 컬렉션 쿼리와 예약 앵커에 맞춰 현재 메뉴를 표시합니다.
-const pageParams = new URLSearchParams(window.location.search);
-const currentCollection = pageParams.get("collection");
-
-if (menu && currentCollection) {
-  menu.querySelectorAll("a.active").forEach((link) => link.classList.remove("active"));
-  const collectionLink = menu.querySelector(`[data-collection="${CSS.escape(currentCollection)}"]`);
-  if (collectionLink) collectionLink.classList.add("active");
-}
-
-if (menu && window.location.hash === "#reservation") {
-  menu.querySelectorAll("a.active").forEach((link) => link.classList.remove("active"));
-  const reservationLink = menu.querySelector("[data-reservation-link]");
-  if (reservationLink) reservationLink.classList.add("active");
-}
-
-// INTRODUCE·컬렉션·RESERVATION 메뉴에 대여/맞춤제작 하위 메뉴를 만듭니다.
-const currentService = pageParams.get("service");
-const serviceLabels = { rental: "대여", custom: "맞춤제작" };
-
+const page = window.location.pathname.split("/").pop() || "index.html";
 if (menu) {
-  const serviceMenuLinks = Array.from(menu.querySelectorAll(
-    'a[href="about.html"], a[data-collection], a[data-reservation-link]'
-  ));
-
-  serviceMenuLinks.forEach((link) => {
-    const item = document.createElement("div");
-    const submenu = document.createElement("div");
-    const submenuToggle = document.createElement("button");
-    const label = link.textContent.trim();
-
-    item.className = "nav-item has-submenu";
-    link.classList.add("nav-primary-link");
-    submenu.className = "nav-submenu";
-    submenu.setAttribute("aria-label", label + " 서비스");
-
-    submenuToggle.className = "nav-submenu-toggle";
-    submenuToggle.type = "button";
-    submenuToggle.setAttribute("aria-label", label + " 하위 메뉴 열기");
-    submenuToggle.setAttribute("aria-expanded", "false");
-    submenuToggle.textContent = "⌄";
-
-    Object.entries(serviceLabels).forEach(([service, serviceLabel]) => {
-      const serviceLink = document.createElement("a");
-      const target = new URL(link.href, window.location.href);
-      target.searchParams.set("service", service);
-      serviceLink.href = target.pathname + target.search + target.hash;
-      serviceLink.textContent = serviceLabel;
-      if (currentService === service && link.classList.contains("active")) {
-        serviceLink.classList.add("active");
-      }
-      serviceLink.addEventListener("click", () => menu.classList.remove("open"));
-      submenu.appendChild(serviceLink);
-    });
-
-    link.before(item);
-    item.append(link, submenuToggle, submenu);
-
-    submenuToggle.addEventListener("click", () => {
-      const willOpen = !item.classList.contains("submenu-open");
-      menu.querySelectorAll(".submenu-open").forEach((openItem) => {
-        openItem.classList.remove("submenu-open");
-        openItem.querySelector(".nav-submenu-toggle")?.setAttribute("aria-expanded", "false");
-      });
-      item.classList.toggle("submenu-open", willOpen);
-      submenuToggle.setAttribute("aria-expanded", String(willOpen));
-    });
+  const activePage = page === "product.html" ? "products.html" : page;
+  menu.querySelectorAll("a").forEach((link) => {
+    const target = new URL(link.href, window.location.href);
+    const linkedPage = target.pathname.split("/").pop();
+    let isCurrent = linkedPage === activePage;
+    if (activePage === "contact.html") {
+      isCurrent = isCurrent && (window.location.hash === "#reservation"
+        ? target.hash === "#reservation"
+        : target.hash !== "#reservation");
+    }
+    if (isCurrent) link.setAttribute("aria-current", "page");
   });
 }
 
-if (currentService && serviceLabels[currentService]) {
-  const pageHead = document.querySelector(".page-head");
-  if (pageHead) {
-    const serviceLabel = document.createElement("p");
-    serviceLabel.className = "service-label";
-    serviceLabel.textContent = serviceLabels[currentService];
-    pageHead.prepend(serviceLabel);
-  }
+const nav = document.querySelector(".nav");
+function updateNav() {
+  nav?.classList.toggle("is-scrolled", window.scrollY > 24);
+}
+updateNav();
+window.addEventListener("scroll", updateNav, { passive: true });
+
+if (!document.querySelector(".floating-book")) {
+  const bookingLink = document.createElement("a");
+  bookingLink.className = "floating-book";
+  bookingLink.href = "contact.html#reservation";
+  bookingLink.innerHTML = '<span aria-hidden="true">＋</span> 1:1 CONSULTATION';
+  bookingLink.setAttribute("aria-label", "1대1 스타일링 상담 예약");
+  document.body.appendChild(bookingLink);
 }
 
-// 여기에 다른 동작을 추가할 수 있습니다.
-// 예: Codex에게 "스크롤하면 메뉴 배경을 진하게 해줘" 처럼 말하면 코드가 채워집니다.
+const revealItems = document.querySelectorAll("[data-reveal]");
+if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add("is-visible");
+      observer.unobserve(entry.target);
+    });
+  }, { threshold: 0.12 });
+  revealItems.forEach((item) => revealObserver.observe(item));
+} else {
+  revealItems.forEach((item) => item.classList.add("is-visible"));
+}
