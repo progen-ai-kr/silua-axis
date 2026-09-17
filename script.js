@@ -72,3 +72,18 @@ if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-mot
 } else {
   revealItems.forEach((item) => item.classList.add("is-visible"));
 }
+
+const heroVideo = document.querySelector("[data-hero-video]");
+if (heroVideo) {
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  const syncHeroMotion = () => {
+    if (reducedMotion.matches) {
+      heroVideo.pause();
+      heroVideo.currentTime = 0;
+    } else {
+      heroVideo.play().catch(() => {});
+    }
+  };
+  syncHeroMotion();
+  reducedMotion.addEventListener?.("change", syncHeroMotion);
+}

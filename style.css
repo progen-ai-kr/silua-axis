@@ -330,7 +330,7 @@ body.menu-open { overflow: hidden; }
 
 /* home */
 .hero.hero-editorial { position: relative; display: grid; min-height: calc(100svh - 72px); padding: 0; border: 0; place-items: end start; background: #27302a; text-align: left; overflow: hidden; }
-.hero-media { position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; object-fit: cover; object-position: 57% center; }
+.hero-media { position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; object-fit: cover; object-position: 57% center; pointer-events: none; }
 .hero-overlay { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(20, 25, 22, .76) 0%, rgba(20, 25, 22, .32) 62%, rgba(20, 25, 22, .08) 100%); }
 .hero-copy { position: relative; z-index: 1; width: min(100% - 40px, var(--maxw)); margin: 0 auto; padding: 100px 0 76px; color: #fff; }
 .hero .hero-copy .eyebrow { color: #dbe4dc; }
@@ -356,6 +356,23 @@ body.menu-open { overflow: hidden; }
 .editorial-card h3 { margin: 7px 0 3px; font-family: var(--font-display); font-size: 27px; font-weight: 400; }
 .editorial-card p { color: rgba(255,255,255,.75); font-size: 12px; }
 .editorial-card:hover img { transform: scale(1.035); }
+.new-arrivals-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 42px 10px; width: min(calc(100% - 24px), var(--maxw)); margin-inline: auto; }
+.new-arrival-card { color: var(--ink); text-decoration: none; }
+.new-arrival-image { position: relative; aspect-ratio: 3 / 4; overflow: hidden; background: var(--surface); }
+.new-arrival-image img { width: 100%; height: 100%; object-fit: cover; object-position: center top; transition: transform .7s cubic-bezier(.2,.7,.2,1); }
+.new-arrival-image span { position: absolute; top: 10px; left: 10px; padding: 6px 8px 5px; background: rgba(17,24,29,.88); color: #fff; font-size: 8px; letter-spacing: .16em; }
+.new-arrival-card:hover .new-arrival-image img { transform: scale(1.025); }
+.new-arrival-label { margin-top: 14px; color: var(--accent-hover); font-size: 8px; letter-spacing: .12em; }
+.new-arrival-card h3 { margin-top: 8px; font-family: var(--font-main); font-size: clamp(14px, 3.7vw, 18px); font-weight: 400; line-height: 1.35; letter-spacing: -.025em; }
+.new-arrival-name { margin-top: 5px; color: var(--ink-soft); font-size: 11px; }
+.new-arrival-card > strong { display: inline-block; margin-top: 14px; padding-bottom: 3px; border-bottom: 1px solid var(--line); color: var(--ink-soft); font-size: 8px; font-weight: 500; letter-spacing: .12em; }
+.new-arrivals-more { display: flex; justify-content: center; padding: 24px 20px 96px; }
+.store-bridge { display: grid; gap: 38px; padding: 84px 24px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--bg); }
+.store-bridge h2 { font-family: var(--font-display); font-size: clamp(31px, 7vw, 50px); font-weight: 400; line-height: 1.4; }
+.store-bridge > div:last-child > p { max-width: 560px; color: var(--ink-soft); font-size: 14px; line-height: 1.9; }
+.store-bridge-link { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-top: 30px; padding: 19px 0; border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); color: var(--ink); font-size: 12px; letter-spacing: .06em; text-decoration: none; }
+.store-bridge-link strong { font-size: 20px; font-weight: 300; transition: transform .25s ease; }
+.store-bridge-link:hover strong { transform: translate(3px, -3px); }
 .service-section { display: grid; background: var(--mint); }
 .service-image { min-height: 520px; }
 .service-image img { width: 100%; height: 100%; object-fit: cover; }
@@ -423,6 +440,11 @@ body.menu-open { overflow: hidden; }
 .collection-tabs a[aria-current="page"] { color: var(--ink); border-bottom: 1px solid var(--ink); }
 .product-list-section { min-height: 420px; }
 .collection-product-grid { gap: 34px 14px; }
+.collection-store-banner { display: grid; background: var(--surface); }
+.collection-store-banner > img { width: 100%; height: 520px; object-fit: cover; object-position: center 20%; }
+.collection-store-banner > div { padding: 64px 24px 72px; }
+.collection-store-banner h2 { font-family: var(--font-display); font-size: clamp(32px, 8vw, 52px); font-weight: 400; line-height: 1.35; }
+.collection-store-banner div > p:not(.eyebrow) { margin: 24px 0 30px; color: var(--ink-soft); line-height: 1.9; }
 .product-card .card-img { position: relative; margin-bottom: 16px; background: var(--surface); border-radius: 0; }
 .product-card .card-img img { transition: transform .6s cubic-bezier(.2,.7,.2,1); }
 .product-card:hover .card-img img { transform: scale(1.025); }
@@ -505,7 +527,14 @@ body.menu-open { overflow: hidden; }
   .editorial-grid { grid-template-columns: 1.25fr 1fr; grid-template-rows: repeat(2, 330px); gap: 18px; }
   .editorial-card { min-height: 0; }
   .editorial-card-tall { grid-row: 1 / 3; }
+  .new-arrivals-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 58px 18px; width: min(calc(100% - 72px), var(--maxw)); }
+  .new-arrivals-more { padding-bottom: 120px; }
+  .store-bridge { grid-template-columns: 1fr 1fr; gap: 72px; padding: 100px max(36px, calc((100vw - var(--maxw)) / 2)); }
+  .store-bridge > div:last-child { align-self: end; }
   .collection-product-grid { grid-template-columns: repeat(3, 1fr); gap: 56px 24px; }
+  .collection-store-banner { grid-template-columns: 1fr 1fr; min-height: 680px; }
+  .collection-store-banner > img { height: 100%; min-height: 680px; }
+  .collection-store-banner > div { display: flex; flex-direction: column; justify-content: center; padding: 80px 56px; }
   .collection-note-section { grid-template-columns: 1fr 1fr; padding: 90px max(36px, calc((100vw - var(--maxw)) / 2)); }
   .story-grid { grid-template-columns: .3fr 1fr 1.15fr; gap: 48px; }
   .values-grid { grid-template-columns: repeat(2, 1fr); }
@@ -559,6 +588,9 @@ body.menu-open { overflow: hidden; }
   .product-list-section { padding-block: 100px 130px; }
   .collection-product-grid { grid-template-columns: repeat(3, 1fr); }
   .collection-note-section { padding-block: 110px; }
+  .collection-store-banner { min-height: 760px; }
+  .collection-store-banner > img { min-height: 760px; }
+  .collection-store-banner > div { padding: 100px max(70px, calc((100vw - var(--maxw)) / 2)) 100px 80px; }
   .portfolio-section { padding-block: 100px 140px; }
   .contact-hero { grid-template-columns: 1fr 1fr; min-height: calc(100svh - 80px); }
   .contact-hero-copy { display: flex; flex-direction: column; justify-content: center; padding: 100px 70px max(100px, calc((100vw - var(--maxw)) / 2)); padding-left: max(70px, calc((100vw - var(--maxw)) / 2)); }
@@ -619,10 +651,12 @@ body.menu-open { overflow: hidden; }
 .collection-showcase .section-heading { width: min(calc(100% - 40px), var(--maxw)); margin-inline: auto; padding-bottom: 8px; }
 .editorial-grid { gap: 1px; background: #fff; }
 .editorial-card, .editorial-card-tall { min-height: 72svh; }
+.editorial-card img { object-position: center top; }
 .editorial-card::after { background: linear-gradient(0deg, rgba(6,11,14,.66), rgba(6,11,14,.02) 64%); }
 .editorial-card > div { right: 20px; bottom: 36px; left: 20px; text-align: center; }
 .editorial-card h3 { font-family: var(--font-main); font-size: clamp(25px, 5vw, 38px); font-weight: 300; letter-spacing: -.03em; }
 .editorial-card p { font-size: 11px; letter-spacing: .03em; }
+.store-bridge h2, .collection-store-banner h2 { font-family: var(--font-main); font-weight: 300; letter-spacing: -.04em; }
 
 .service-section { background: var(--surface); }
 .service-image img { object-position: 48% center; }
@@ -631,6 +665,7 @@ body.menu-open { overflow: hidden; }
 .occasion-strip { background: var(--ink); }
 .occasion-strip p, .occasion-strip span { color: rgba(255,255,255,.72); }
 .closing-cta { min-height: 86svh; }
+.closing-cta > img { object-position: center 28%; }
 .closing-cta::after { background: rgba(10,15,18,.42); }
 .closing-cta h2 { font-family: var(--font-main); font-weight: 300; letter-spacing: -.045em; }
 
@@ -672,6 +707,9 @@ body.menu-open { overflow: hidden; }
   .hero-wordmark { top: 26px; }
   .hero-copy { padding-bottom: 72px; }
   .collection-showcase .section-heading { padding-block: 110px 50px; }
+  .new-arrivals-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 70px 24px; }
+  .new-arrival-image span { top: 14px; left: 14px; }
+  .new-arrivals-more { padding-top: 38px; padding-bottom: 150px; }
   .editorial-card, .editorial-card-tall { min-height: 78svh; }
   .editorial-card > div { bottom: 48px; }
   .service-section { min-height: 88svh; }
@@ -681,4 +719,59 @@ body.menu-open { overflow: hidden; }
   .floating-book { width: 360px; height: 56px; }
   .footer { padding-bottom: 80px; }
   .visual-head-right > div { margin-right: max(36px, calc((100vw - var(--maxw)) / 2)); margin-left: auto; }
+}
+
+/* ==========================================================
+   SILUA official channels — real brand imagery and archive
+   ========================================================== */
+.brand-journal { padding-block: 104px; }
+.brand-journal-grid { display: grid; gap: 46px 12px; }
+.brand-journal-grid > a { color: var(--ink); text-decoration: none; }
+.brand-journal-grid img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center top; background: var(--surface); transition: transform .7s cubic-bezier(.2,.7,.2,1); }
+.brand-journal-grid > a { overflow: hidden; }
+.brand-journal-grid > a:hover img { transform: scale(1.02); }
+.brand-journal-grid div { padding-top: 15px; }
+.brand-journal-grid span,
+.official-work-card span { display: block; color: var(--accent-hover); font-size: 8px; font-weight: 600; letter-spacing: .14em; }
+.brand-journal-grid strong { display: block; margin-top: 8px; font-size: 14px; font-weight: 400; line-height: 1.55; }
+.brand-channel-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 50px; padding-top: 24px; border-top: 1px solid var(--line); }
+.brand-channel-links a { min-height: 44px; display: inline-flex; align-items: center; padding: 0 16px; border: 1px solid var(--line); color: var(--ink); font-size: 9px; font-weight: 600; letter-spacing: .12em; text-decoration: none; text-transform: uppercase; }
+.brand-channel-links a:hover { border-color: var(--ink); background: var(--ink); color: #fff; }
+
+.visual-head-right > img { object-position: center 34%; }
+.image-quote img { object-position: center 40%; }
+.philosophy-copy .text-link { margin-top: 28px; }
+.audience-section img { object-position: center top; }
+.contact-hero > img { object-position: center 28%; }
+
+.official-work { padding-block: 84px 110px; }
+.official-work-grid { display: grid; gap: 48px 14px; }
+.official-work-card { color: var(--ink); text-decoration: none; }
+.official-work-image { overflow: hidden; background: var(--surface); }
+.official-work-card img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center; transition: transform .7s cubic-bezier(.2,.7,.2,1); }
+.official-work-card:hover img { transform: scale(1.02); }
+.official-work-card > div:last-child { padding-top: 20px; }
+.official-work-card h3 { margin-top: 9px; font-family: var(--font-main); font-size: clamp(22px, 6vw, 32px); font-weight: 300; line-height: 1.3; letter-spacing: -.035em; }
+.official-work-card p { margin-top: 12px; color: var(--ink-soft); font-size: 13px; line-height: 1.8; }
+.official-work-card strong { display: inline-block; margin-top: 18px; padding-bottom: 4px; border-bottom: 1px solid var(--line); color: var(--ink); font-size: 9px; font-weight: 600; letter-spacing: .1em; }
+.official-work-wide img { aspect-ratio: 16 / 9; }
+
+/* 운영 포트폴리오에 남아 있던 타 브랜드 임시 이미지만 화면에서 제외합니다. */
+.portfolio-section:has(.portfolio-content img[src*="1787726468424-b0ed9a40.jpg"]) { display: none; }
+
+@media (min-width: 720px) {
+  .brand-journal { padding-block: 130px; }
+  .brand-journal-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+  .brand-journal-grid strong { font-size: 15px; }
+  .official-work { padding-block: 110px 140px; }
+  .official-work-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 70px 24px; }
+  .official-work-wide { grid-column: 1 / -1; display: grid; grid-template-columns: 1.35fr .65fr; align-items: stretch; background: var(--surface); }
+  .official-work-wide img { height: 100%; aspect-ratio: auto; }
+  .official-work-wide > div:last-child { display: flex; flex-direction: column; justify-content: center; padding: 50px; }
+}
+
+@media (min-width: 980px) {
+  .brand-journal { padding-block: 150px; }
+  .brand-journal-grid { gap: 32px; }
+  .official-work-wide > div:last-child { padding: 70px; }
 }
