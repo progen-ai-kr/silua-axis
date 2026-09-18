@@ -55,7 +55,7 @@ window.addEventListener("scroll", updateNav, { passive: true });
 if (!document.querySelector(".floating-book")) {
   const bookingLink = document.createElement("a");
   bookingLink.className = "floating-book";
-  bookingLink.href = "contact.html#fitting";
+  bookingLink.href = "contact.html?program=fitting#reservation-form";
   bookingLink.innerHTML = '<span aria-hidden="true">＋</span> 1:1 CONSULTATION';
   bookingLink.setAttribute("aria-label", "1대1 스타일링 상담 예약");
   document.body.appendChild(bookingLink);
@@ -144,31 +144,71 @@ if (heroSlideshow) {
 const reservationForm = document.querySelector("[data-reservation-form]");
 if (reservationForm) {
   const params = new URLSearchParams(window.location.search);
+  const programs = {
+    "fitting": {
+      eyebrow: "FITTING",
+      title: "피팅 예약",
+      description: "방문 예정일과 시간을 남겨주세요. SILUA 확인 연락 후 예약이 확정됩니다.",
+      label: "피팅"
+    },
+    "personal-color": {
+      eyebrow: "PERSONAL COLOR",
+      title: "퍼스널컬러 예약",
+      description: "가장 자연스럽게 빛나는 색감을 찾는 상담입니다. 방문 가능 시간을 선택해 주세요.",
+      label: "퍼스널컬러"
+    },
+    "body-type": {
+      eyebrow: "BODY TYPE",
+      title: "체형진단 예약",
+      description: "비례와 선을 살리는 스타일링 상담입니다. 방문 가능 시간을 선택해 주세요.",
+      label: "체형진단"
+    },
+    "accessory-workshop": {
+      eyebrow: "ACCESSORY WORKSHOP",
+      title: "소품공방 예약",
+      description: "구두, 가방, 부케 등 특별한 순간을 위한 디테일을 상담합니다.",
+      label: "소품공방"
+    }
+  };
+  const programKey = programs[params.get("program")] ? params.get("program") : "fitting";
+  const program = programs[programKey];
   const productField = reservationForm.elements.product;
-  const typeField = reservationForm.elements.type;
+  const programField = reservationForm.elements.program;
+  const accessoryChoice = reservationForm.querySelector("[data-accessory-choice]");
   const dateFields = reservationForm.querySelectorAll('input[type="date"]');
   const today = new Date();
   const localToday = new Date(today.getTime() - today.getTimezoneOffset() * 60000).toISOString().slice(0, 10);
   dateFields.forEach((field) => { field.min = localToday; });
   if (productField) productField.value = params.get("product") || "";
-  if (typeField && params.get("service") === "bespoke") typeField.value = "맞춤 제작 상담";
-  if (typeField && params.get("service") === "rental") typeField.value = "대여 상담";
+  if (programField) programField.value = program.label;
+  document.querySelector("[data-program-eyebrow]") && (document.querySelector("[data-program-eyebrow]").textContent = program.eyebrow);
+  document.querySelector("[data-program-title]") && (document.querySelector("[data-program-title]").textContent = program.title);
+  document.querySelector("[data-program-description]") && (document.querySelector("[data-program-description]").textContent = program.description);
+  document.querySelectorAll("[data-program-card]").forEach((card) => {
+    card.setAttribute("aria-current", String(card.dataset.programCard === programKey));
+  });
+  if (accessoryChoice) {
+    const showAccessoryChoice = programKey === "accessory-workshop";
+    accessoryChoice.hidden = !showAccessoryChoice;
+    accessoryChoice.querySelectorAll("input").forEach((input, index) => {
+      input.required = showAccessoryChoice;
+      input.checked = showAccessoryChoice && index === 0;
+    });
+  }
 
   reservationForm.addEventListener("submit", (event) => {
     event.preventDefault();
     if (!reservationForm.reportValidity()) return;
     const data = new FormData(reservationForm);
-    const options = data.getAll("option").join(", ") || "선택 안 함";
     const product = data.get("product") || "지정 상품 없음";
     const lines = [
       "[SILUA 예약 요청]",
       "성함: " + data.get("name"),
       "연락처: " + data.get("phone"),
-      "예약 유형: " + data.get("type"),
+      "예약 프로그램: " + data.get("program"),
+      "소품 선택: " + (data.get("workshopItem") || "해당 없음"),
       "관심 상품: " + product,
       "방문 희망: " + data.get("date") + " " + data.get("time"),
-      "행사일: " + (data.get("eventDate") || "미정"),
-      "추가 서비스: " + options,
       "문의 내용: " + (data.get("message") || "없음")
     ];
     const result = reservationForm.querySelector("[data-reservation-result]");
@@ -179,20 +219,3 @@ if (reservationForm) {
     result.scrollIntoView({ behavior: "smooth", block: "nearest" });
   });
 }
-
-document.querySelectorAll("[data-workshop]").forEach((button) => {
-  button.addEventListener("click", () => {
-    const typeField = reservationForm?.elements.type;
-    if (typeField) {
-      const optionLabel = "소품공방 · " + button.dataset.workshop;
-      let option = Array.from(typeField.options).find((item) => item.value === optionLabel);
-      if (!option) {
-        option = new Option(optionLabel, optionLabel);
-        typeField.add(option);
-      }
-      typeField.value = optionLabel;
-      document.getElementById("fitting")?.scrollIntoView({ behavior: "smooth" });
-      typeField.focus({ preventScroll: true });
-    }
-  });
-});
