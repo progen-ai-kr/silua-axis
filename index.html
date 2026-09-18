@@ -32,7 +32,7 @@
         <a href="about.html">ABOUT SILUA</a>
         <div class="nav-item">
           <button class="nav-dropdown-trigger" type="button" aria-expanded="false">RESERVATION</button>
-          <div class="nav-submenu"><a href="contact.html#fitting">FITTING</a><a href="contact.html#atelier">소품공방</a></div>
+          <div class="nav-submenu"><a href="contact.html?program=fitting#reservation-form">FITTING</a><a href="contact.html?program=personal-color#reservation-form">PERSONAL COLOR</a><a href="contact.html?program=body-type#reservation-form">BODY TYPE</a><a href="contact.html?program=accessory-workshop#reservation-form">ACCESSORY WORKSHOP</a></div>
         </div>
         <a href="contact.html">CONTACT</a>
       </nav>
@@ -42,10 +42,10 @@
   <main id="main">
     <section class="hero hero-editorial">
       <div class="hero-slideshow" data-hero-slideshow aria-hidden="true">
-        <img class="hero-slide is-active" src="images/campaign/hero-look-mugunghwa.png" alt="" loading="eager" fetchpriority="high" />
-        <img class="hero-slide" src="images/campaign/hero-look-sonamu.png" alt="" loading="eager" />
-        <img class="hero-slide" src="images/campaign/hero-look-baekui.png" alt="" loading="lazy" />
-        <img class="hero-slide" src="images/campaign/hero-look-jagae.png" alt="" loading="lazy" />
+        <img class="hero-slide is-active" src="images/campaign/silua-studio-mugunghwa.png" alt="" loading="eager" fetchpriority="high" />
+        <img class="hero-slide" src="images/campaign/silua-studio-sonamu.png" alt="" loading="eager" />
+        <img class="hero-slide" src="images/campaign/silua-studio-baekui.png" alt="" loading="lazy" />
+        <img class="hero-slide" src="images/campaign/silua-studio-jagae.png" alt="" loading="lazy" />
       </div>
       <div class="hero-overlay"></div>
       <div class="hero-copy" data-reveal>
@@ -60,7 +60,7 @@
     <section class="home-about section-wide" data-reveal>
       <div class="home-about-copy">
         <p class="eyebrow">ABOUT SILUA</p>
-        <h2>예쁜 옷을 입는 일과,<br />나에게 어울리는 옷을 입는 일은<br />완전히 다른 문제입니다.</h2>
+        <h2>FIND YOUR SIGNATURE</h2>
         <p>SILUA는 1:1 퍼스널컬러와 체형 진단을 바탕으로 당신에게 가장 어울리는 실루엣과 스타일을 제안합니다. 드레스에서 소품까지, 특별한 순간을 완성하는 모든 것을 섬세하게 큐레이션합니다.</p>
         <a class="text-link" href="about.html">OUR STORY <span>→</span></a>
       </div>
@@ -70,10 +70,14 @@
     <section class="home-collection">
       <div class="home-section-heading section-wide" data-reveal><p class="eyebrow">THE COLLECTION</p><h2>당신의 순간을 위한<br />네 가지 실루엣</h2></div>
       <div class="home-collection-grid">
-        <a href="products.html?collection=self-wedding" data-reveal><img src="images/campaign/bridal.webp" alt="셀프웨딩 드레스" loading="lazy" /><span>SELF WEDDING<small>대여 · 맞춤</small></span></a>
-        <a href="products.html?collection=evening-party" data-reveal><img src="images/campaign/evening.webp" alt="이브닝과 파티 드레스" loading="lazy" /><span>EVENING &amp; PARTY<small>대여 · 맞춤</small></span></a>
-        <a href="products.html?collection=suit" data-reveal><img src="images/campaign/formal.webp" alt="실루아 수트" loading="lazy" /><span>SUIT<small>대여 · 맞춤</small></span></a>
-        <a href="products.html?collection=accessory" data-reveal><img src="images/campaign/craft.webp" alt="실루아 액세서리" loading="lazy" /><span>ACCESSORY<small>SHOES · BAG · BOUQUET</small></span></a>
+        <a href="products.html?collection=self-wedding" data-reveal><img src="images/campaign/silua-studio-mugunghwa.png" alt="무궁화 라벤더 한복 드레스" loading="lazy" /><span>MUGUNGHWA<small>깊은 뜻을 품은 아름다움</small></span></a>
+        <a href="products.html?collection=evening-party" data-reveal><img src="images/campaign/silua-studio-sonamu.png" alt="소나무 민트 머메이드 드레스" loading="lazy" /><span>SONAMU<small>변함없이 지켜주는 힘</small></span></a>
+        <a href="products.html?collection=self-wedding" data-reveal><img src="images/campaign/silua-studio-baekui.png" alt="백의민족 아이보리 웨딩 드레스" loading="lazy" /><span>BAEKUI MINJOK<small>순수함과 고결함의 상징</small></span></a>
+        <a href="products.html?collection=suit" data-reveal><img src="images/campaign/silua-studio-jagae.png" alt="자개 네이비 한복 수트" loading="lazy" /><span>JAGAE<small>빛을 품은 아름다움</small></span></a>
+      </div>
+      <div class="home-store-mini section-wide" data-reveal>
+        <p>SHOP SILUA</p>
+        <a href="https://smartstore.naver.com/silua?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">Naver Smart Store →</a>
       </div>
     </section>
 
@@ -88,8 +92,8 @@
     <section class="home-reservation">
       <div class="home-section-heading section-wide" data-reveal><p class="eyebrow">FIND YOUR SILUA</p><h2>당신에게 가장 아름다운 실루엣을<br />직접 만나보세요.</h2></div>
       <div class="home-reservation-grid section-wide">
-        <a href="contact.html#fitting" data-reveal><img src="images/campaign/consultation.webp" alt="실루아 방문 피팅" loading="lazy" /><div><p>PRIVATE FITTING</p><h3>방문 피팅 예약</h3><span>예약하기 →</span></div></a>
-        <a href="contact.html#atelier" data-reveal><img src="images/campaign/craft.webp" alt="실루아 소품 공방" loading="lazy" /><div><p>SILUA ATELIER</p><h3>나만의 소품 만들기</h3><span>예약하기 →</span></div></a>
+        <a href="contact.html?program=fitting#reservation-form" data-reveal><img src="images/campaign/consultation.webp" alt="실루아 방문 피팅" loading="lazy" /><div><p>PRIVATE FITTING</p><h3>방문 피팅 예약</h3><span>예약하기 →</span></div></a>
+        <a href="contact.html?program=accessory-workshop#reservation-form" data-reveal><img src="images/campaign/craft.webp" alt="실루아 소품 공방" loading="lazy" /><div><p>SILUA ATELIER</p><h3>나만의 소품 만들기</h3><span>예약하기 →</span></div></a>
       </div>
     </section>
   </main>

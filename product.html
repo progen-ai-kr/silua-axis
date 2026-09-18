@@ -12,7 +12,7 @@
 <body>
 
   <a class="skip-link" href="#product-detail">본문 바로가기</a>
-  <header class="nav"><div class="nav-inner"><a href="index.html" class="logo" aria-label="실루아 홈"><img class="brand-logo header-logo" src="images/silua-logo.png" alt="SILUA DRESS" /></a><button class="nav-toggle" type="button" aria-label="메뉴 열기" aria-controls="primary-menu" aria-expanded="false"><span></span><span></span></button><nav class="nav-menu" id="primary-menu" aria-label="주요 메뉴"><a href="index.html">HOME</a><div class="nav-item nav-item-wide"><button class="nav-dropdown-trigger" type="button" aria-expanded="false">COLLECTION</button><div class="nav-submenu nav-mega"><div class="nav-subgroup"><a class="nav-subgroup-title" href="products.html?collection=self-wedding">SELF WEDDING</a><a href="products.html?collection=self-wedding&amp;service=rental">대여</a><a href="products.html?collection=self-wedding&amp;service=bespoke">맞춤</a></div><div class="nav-subgroup"><a class="nav-subgroup-title" href="products.html?collection=evening-party">EVENING &amp; PARTY</a><a href="products.html?collection=evening-party&amp;service=rental">대여</a><a href="products.html?collection=evening-party&amp;service=bespoke">맞춤</a></div><div class="nav-subgroup"><a class="nav-subgroup-title" href="products.html?collection=suit">SUIT</a><a href="products.html?collection=suit&amp;service=rental">대여</a><a href="products.html?collection=suit&amp;service=bespoke">맞춤</a></div><div class="nav-subgroup"><a class="nav-subgroup-title" href="products.html?collection=accessory">ACCESSORY</a><a href="products.html?collection=accessory&amp;service=shoes">구두</a><a href="products.html?collection=accessory&amp;service=bag">가방</a><a href="products.html?collection=accessory&amp;service=bouquet">부케</a></div></div></div><a href="about.html">ABOUT SILUA</a><div class="nav-item"><button class="nav-dropdown-trigger" type="button" aria-expanded="false">RESERVATION</button><div class="nav-submenu"><a href="contact.html#fitting">FITTING</a><a href="contact.html#atelier">소품공방</a></div></div><a href="contact.html">CONTACT</a></nav></div></header>
+  <header class="nav"><div class="nav-inner"><a href="index.html" class="logo" aria-label="실루아 홈"><img class="brand-logo header-logo" src="images/silua-logo.png" alt="SILUA DRESS" /></a><button class="nav-toggle" type="button" aria-label="메뉴 열기" aria-controls="primary-menu" aria-expanded="false"><span></span><span></span></button><nav class="nav-menu" id="primary-menu" aria-label="주요 메뉴"><a href="index.html">HOME</a><div class="nav-item nav-item-wide"><button class="nav-dropdown-trigger" type="button" aria-expanded="false">COLLECTION</button><div class="nav-submenu nav-mega"><div class="nav-subgroup"><a class="nav-subgroup-title" href="products.html?collection=self-wedding">SELF WEDDING</a><a href="products.html?collection=self-wedding&amp;service=rental">대여</a><a href="products.html?collection=self-wedding&amp;service=bespoke">맞춤</a></div><div class="nav-subgroup"><a class="nav-subgroup-title" href="products.html?collection=evening-party">EVENING &amp; PARTY</a><a href="products.html?collection=evening-party&amp;service=rental">대여</a><a href="products.html?collection=evening-party&amp;service=bespoke">맞춤</a></div><div class="nav-subgroup"><a class="nav-subgroup-title" href="products.html?collection=suit">SUIT</a><a href="products.html?collection=suit&amp;service=rental">대여</a><a href="products.html?collection=suit&amp;service=bespoke">맞춤</a></div><div class="nav-subgroup"><a class="nav-subgroup-title" href="products.html?collection=accessory">ACCESSORY</a><a href="products.html?collection=accessory&amp;service=shoes">구두</a><a href="products.html?collection=accessory&amp;service=bag">가방</a><a href="products.html?collection=accessory&amp;service=bouquet">부케</a></div></div></div><a href="about.html">ABOUT SILUA</a><div class="nav-item"><button class="nav-dropdown-trigger" type="button" aria-expanded="false">RESERVATION</button><div class="nav-submenu"><a href="contact.html?program=fitting#reservation-form">FITTING</a><a href="contact.html?program=personal-color#reservation-form">PERSONAL COLOR</a><a href="contact.html?program=body-type#reservation-form">BODY TYPE</a><a href="contact.html?program=accessory-workshop#reservation-form">ACCESSORY WORKSHOP</a></div></div><a href="contact.html">CONTACT</a></nav></div></header>
 
   <!-- 브랜드 담당자가 만든 제품 정보와 상세 내용이 자동으로 채워집니다. -->
   <main id="product-detail" aria-live="polite">
@@ -47,7 +47,10 @@
   <script src="script.js?v=20260917-final"></script>
   <script src="catalog.js?v=20260826-rich-editor-1"></script>
   <script>
-    const productId = new URLSearchParams(location.search).get("id");
+    const params = new URLSearchParams(location.search);
+    const productId = params.get("id");
+    const selectedService = params.get("service") || "";
+    const selectedCollection = params.get("collection") || "";
 
     function imageMarkup(source, alt, className, eager) {
       const safeSource = ProductCatalog.safeImageUrl(source);
@@ -158,6 +161,99 @@
       });
     }
 
+    function inferCollection(product) {
+      if (selectedCollection) return selectedCollection;
+      const searchable = String([product.label, product.name, product.summary, product.category, ...(product.keywords || [])].join(" ")).toLowerCase();
+      if (searchable.includes("evening") || searchable.includes("party") || searchable.includes("파티")) return "evening-party";
+      if (searchable.includes("suit") || searchable.includes("수트") || searchable.includes("formal")) return "suit";
+      if (searchable.includes("accessory") || searchable.includes("액세서리") || searchable.includes("악세서리")) return "accessory";
+      return "self-wedding";
+    }
+
+    function renderServicePanel(product) {
+      const esc = ProductCatalog.escapeHtml;
+      const collection = inferCollection(product);
+      const base = "product.html?id=" + encodeURIComponent(product.id) + "&collection=" + encodeURIComponent(collection);
+      const productName = esc(product.name || "SILUA");
+
+      if (selectedService === "rental") {
+        return '<section class="product-service-panel" id="rental">' +
+          '<div><p class="eyebrow">RENTAL</p><h2>대여 신청</h2><p>' + productName + '의 행사 날짜와 사이즈를 남겨주세요. 예약 가능 여부는 SILUA 확인 연락 후 확정됩니다.</p></div>' +
+          '<form class="product-service-form" data-product-request-form data-request-type="대여 신청">' +
+            '<input type="hidden" name="product" value="' + productName + '" />' +
+            '<div class="form-grid">' +
+              '<label><span>행사 날짜</span><input type="date" name="eventDate" required /></label>' +
+              '<fieldset class="size-choice"><legend>사이즈</legend><label><input type="radio" name="size" value="44" required />44</label><label><input type="radio" name="size" value="55" />55</label><label><input type="radio" name="size" value="66" />66</label></fieldset>' +
+              '<label><span>성함</span><input type="text" name="name" autocomplete="name" required /></label>' +
+              '<label><span>연락처</span><input type="tel" name="phone" autocomplete="tel" placeholder="010-0000-0000" required /></label>' +
+            '</div>' +
+            '<label><span>문의 내용</span><textarea name="message" rows="4" placeholder="원하는 피팅 일정이나 참고할 내용을 남겨주세요."></textarea></label>' +
+            '<button class="btn btn-dark" type="submit">대여 문의 / 신청</button>' +
+            '<div class="reservation-result" data-product-request-result hidden aria-live="polite"></div>' +
+          '</form>' +
+        '</section>';
+      }
+
+      if (selectedService === "bespoke") {
+        return '<section class="product-service-panel" id="bespoke">' +
+          '<div><p class="eyebrow">CUSTOM MADE</p><h2>맞춤 제작 문의</h2><p>맞춤 제작 가격은 디자인과 원단, 제작 일정에 따라 상담 후 안내됩니다.</p><div class="price-info"><span>PRICE INFORMATION</span><strong>상담 후 개별 안내</strong></div></div>' +
+          '<form class="product-service-form" data-product-request-form data-request-type="맞춤 제작 문의">' +
+            '<input type="hidden" name="product" value="' + productName + '" />' +
+            '<div class="form-grid">' +
+              '<label><span>행사 날짜</span><input type="date" name="eventDate" required /></label>' +
+              '<label><span>키</span><input type="number" name="height" min="1" inputmode="decimal" placeholder="cm" /></label>' +
+              '<label><span>가슴</span><input type="number" name="bust" min="1" inputmode="decimal" placeholder="cm" /></label>' +
+              '<label><span>허리</span><input type="number" name="waist" min="1" inputmode="decimal" placeholder="cm" /></label>' +
+              '<label><span>엉덩이</span><input type="number" name="hip" min="1" inputmode="decimal" placeholder="cm" /></label>' +
+              '<label><span>성함</span><input type="text" name="name" autocomplete="name" required /></label>' +
+              '<label><span>연락처</span><input type="tel" name="phone" autocomplete="tel" placeholder="010-0000-0000" required /></label>' +
+            '</div>' +
+            '<label><span>원하는 디자인과 문의 내용</span><textarea name="message" rows="4" placeholder="원하는 분위기, 원단, 착용 장면을 남겨주세요."></textarea></label>' +
+            '<button class="btn btn-dark" type="submit">맞춤 문의</button>' +
+            '<div class="reservation-result" data-product-request-result hidden aria-live="polite"></div>' +
+          '</form>' +
+        '</section>';
+      }
+
+      return '<section class="product-service-panel product-service-choices">' +
+        '<div><p class="eyebrow">SELECT SERVICE</p><h2>대여 또는 맞춤으로<br />상담을 이어가세요.</h2><p>원하는 방식에 맞춰 날짜와 사이즈 정보를 남길 수 있습니다.</p></div>' +
+        '<div class="service-choice-actions">' +
+          '<a class="btn btn-dark" href="' + base + '&service=rental#rental">대여 페이지 이동</a>' +
+          '<a class="btn ghost" href="' + base + '&service=bespoke#bespoke">맞춤 페이지 이동</a>' +
+        '</div>' +
+      '</section>';
+    }
+
+    function setupProductRequestForms() {
+      document.querySelectorAll("[data-product-request-form]").forEach((form) => {
+        const dateFields = form.querySelectorAll('input[type="date"]');
+        const today = new Date();
+        const localToday = new Date(today.getTime() - today.getTimezoneOffset() * 60000).toISOString().slice(0, 10);
+        dateFields.forEach((field) => { field.min = localToday; });
+        form.addEventListener("submit", (event) => {
+          event.preventDefault();
+          if (!form.reportValidity()) return;
+          const data = new FormData(form);
+          const type = form.dataset.requestType || "SILUA 문의";
+          const bodyLines = [
+            "[SILUA " + type + "]",
+            "상품: " + (data.get("product") || "지정 상품 없음"),
+            "성함: " + data.get("name"),
+            "연락처: " + data.get("phone"),
+            "행사 날짜: " + data.get("eventDate"),
+            "사이즈: " + (data.get("size") || "별도 상담"),
+            "신체 사이즈: 키 " + (data.get("height") || "-") + " / 가슴 " + (data.get("bust") || "-") + " / 허리 " + (data.get("waist") || "-") + " / 엉덩이 " + (data.get("hip") || "-"),
+            "문의 내용: " + (data.get("message") || "없음")
+          ];
+          const result = form.querySelector("[data-product-request-result]");
+          const subject = encodeURIComponent("SILUA " + type + " - " + data.get("name"));
+          const body = encodeURIComponent(bodyLines.join("\n"));
+          result.hidden = false;
+          result.innerHTML = '<strong>요청서가 준비되었습니다.</strong><p>아래 방법으로 보내주시면 SILUA 확인 연락 후 일정이 확정됩니다.</p><a href="mailto:siluadress@naver.com?subject=' + subject + '&body=' + body + '">이메일로 접수하기 →</a><a href="tel:070-4571-9545">전화로 문의하기 →</a>';
+        });
+      });
+    }
+
     function renderSection(section, product, index) {
       if (!section || !section.type) return "";
       const esc = ProductCatalog.escapeHtml;
@@ -215,8 +311,8 @@
           .map((keyword) => "<span>" + esc(keyword) + "</span>").join("");
         const price = product.price ? '<p class="product-price">' + esc(product.price) + "</p>" : "";
         const buyNotice = String(product.buyNotice || "").trim();
-        const internalInquiry = "contact.html?product=" + encodeURIComponent(product.name || "") + "&productId=" + encodeURIComponent(product.id || "") + "#fitting";
-        const buyButton = '<a class="btn product-buy" href="' + esc(internalInquiry) + '">' + esc(product.buyLabel || "구매·대여 상담") + "</a>";
+        const internalInquiry = "contact.html?product=" + encodeURIComponent(product.name || "") + "&productId=" + encodeURIComponent(product.id || "") + "#reservation-form";
+        const buyButton = selectedService ? "" : '<a class="btn product-buy" href="' + esc(internalInquiry) + '">' + esc(product.buyLabel || "구매·대여 상담") + "</a>";
 
         let sections = Array.isArray(product.sections)
           ? product.sections.map((section, index) => renderSection(section, product, index)).join("")
@@ -241,10 +337,12 @@
               buyButton +
             "</div>" +
           "</section>" +
+          renderServicePanel(product) +
           (sections ? '<div class="product-story">' + sections + "</div>" : "");
 
         setupProductCarousels();
         setupPurchaseDialog(product);
+        setupProductRequestForms();
       })
       .catch(() => {
         document.getElementById("product-detail").innerHTML =
